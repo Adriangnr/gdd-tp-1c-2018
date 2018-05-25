@@ -38,7 +38,6 @@
             this.txtHotel = new System.Windows.Forms.TextBox();
             this.txtHuespedes = new System.Windows.Forms.TextBox();
             this.fechaDesde = new System.Windows.Forms.DateTimePicker();
-            this.txtRegimen = new System.Windows.Forms.TextBox();
             this.labelRegimen = new System.Windows.Forms.Label();
             this.labelHasta = new System.Windows.Forms.Label();
             this.labelMasFiltros = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboRegimen = new System.Windows.Forms.ComboBox();
             fechaHasta = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -125,13 +125,6 @@
             this.fechaDesde.Size = new System.Drawing.Size(293, 26);
             this.fechaDesde.TabIndex = 9;
             // 
-            // txtRegimen
-            // 
-            this.txtRegimen.Location = new System.Drawing.Point(610, 69);
-            this.txtRegimen.Name = "txtRegimen";
-            this.txtRegimen.Size = new System.Drawing.Size(292, 26);
-            this.txtRegimen.TabIndex = 10;
-            // 
             // fechaHasta
             // 
             fechaHasta.Location = new System.Drawing.Point(610, 119);
@@ -201,11 +194,20 @@
             this.textBox1.Size = new System.Drawing.Size(135, 26);
             this.textBox1.TabIndex = 18;
             // 
+            // comboRegimen
+            // 
+            this.comboRegimen.FormattingEnabled = true;
+            this.comboRegimen.Location = new System.Drawing.Point(610, 64);
+            this.comboRegimen.Name = "comboRegimen";
+            this.comboRegimen.Size = new System.Drawing.Size(290, 28);
+            this.comboRegimen.TabIndex = 19;
+            // 
             // GenerarModificarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 618);
+            this.Controls.Add(this.comboRegimen);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelTitulo);
             this.Controls.Add(this.btnIniciarSesion);
@@ -214,7 +216,6 @@
             this.Controls.Add(this.labelHasta);
             this.Controls.Add(this.labelRegimen);
             this.Controls.Add(fechaHasta);
-            this.Controls.Add(this.txtRegimen);
             this.Controls.Add(this.fechaDesde);
             this.Controls.Add(this.txtHuespedes);
             this.Controls.Add(this.txtHotel);
@@ -226,6 +227,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "GenerarModificarReserva";
             this.Text = "GenerarModificarReserva";
+            this.Load += new System.EventHandler(this.GenerarModificarReserva_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -243,7 +245,6 @@
         private System.Windows.Forms.TextBox txtHotel;
         private System.Windows.Forms.TextBox txtHuespedes;
         private System.Windows.Forms.DateTimePicker fechaDesde;
-        private System.Windows.Forms.TextBox txtRegimen;
         private System.Windows.Forms.Label labelRegimen;
         private System.Windows.Forms.Label labelHasta;
         private System.Windows.Forms.Label labelMasFiltros;
@@ -251,5 +252,6 @@
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboRegimen;
     }
 }

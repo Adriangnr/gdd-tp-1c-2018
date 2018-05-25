@@ -16,5 +16,10 @@ namespace FrbaHotel.GenerarModificacionReserva
         {
             InitializeComponent();
         }
+
+        private void GenerarModificarReserva_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
