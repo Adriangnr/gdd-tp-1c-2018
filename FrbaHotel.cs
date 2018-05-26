@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FrbaHotel.AbmUsuario;
 
 namespace FrbaHotel
 {
@@ -27,8 +28,10 @@ namespace FrbaHotel
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            Login.Login login = new Login.Login();
-            login.Show();
+            //Login.Login login = new Login.Login();
+            //login.Show();
+            AbmUsuario.AltaUsuario au = new AbmUsuario.AltaUsuario();
+            au.Show();
             this.Hide();
         }
     }

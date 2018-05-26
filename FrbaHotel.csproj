@@ -68,17 +68,36 @@
     <Compile Include="AbmRol\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="AbmUsuario\AltaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmUsuario\AltaUsuario.Designer.cs">
+      <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmUsuario\DbUsuario.cs" />
+    <Compile Include="AbmUsuario\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmUsuario\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="CancelarReserva\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CancelarReserva\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConectorDB\ConectorDb.cs" />
     <Compile Include="FrbaHotel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrbaHotel.Designer.cs">
       <DependentUpon>FrbaHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrbaHotelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrbaHotelDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="GenerarModificacionReserva\GenerarModificarReserva.cs">
       <SubType>Form</SubType>
@@ -98,6 +117,7 @@
     <Compile Include="Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarConsumible\Form1.cs">
@@ -112,6 +132,12 @@
     <Compile Include="RegistrarEstadia\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AbmUsuario\AltaUsuario.resx">
+      <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmUsuario\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrbaHotel.resx">
       <DependentUpon>FrbaHotel.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +156,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="FrbaHotelDataSet.xsc">
+      <DependentUpon>FrbaHotelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FrbaHotelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FrbaHotelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FrbaHotelDataSet.xss">
+      <DependentUpon>FrbaHotelDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -143,9 +180,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DBConnector\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
