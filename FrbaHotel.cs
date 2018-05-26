@@ -13,9 +13,20 @@ namespace FrbaHotel
 {
     public partial class FrbaHotel : Form
     {
-        public FrbaHotel()
+        private static FrbaHotel instancia = null;
+
+        private FrbaHotel()
         {
             InitializeComponent();
+        }
+
+        public static FrbaHotel obtenerInstancia()
+        {
+            if (instancia == null)
+            {
+                instancia = new FrbaHotel();
+            }
+            return instancia;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,11 +39,14 @@ namespace FrbaHotel
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            //Login.Login login = new Login.Login();
-            //login.Show();
-            AbmUsuario.AltaUsuario au = new AbmUsuario.AltaUsuario();
-            au.Show();
+            Login.Login login = Login.Login.obtenerInstancia();
+            login.Show();
             this.Hide();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

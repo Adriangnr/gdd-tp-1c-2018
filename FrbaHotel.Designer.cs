@@ -30,11 +30,12 @@
         {
             this.btnUsuario = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUsuario
             // 
-            this.btnUsuario.Location = new System.Drawing.Point(122, 63);
+            this.btnUsuario.Location = new System.Drawing.Point(117, 34);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(112, 49);
             this.btnUsuario.TabIndex = 0;
@@ -44,7 +45,7 @@
             // 
             // btnCliente
             // 
-            this.btnCliente.Location = new System.Drawing.Point(122, 151);
+            this.btnCliente.Location = new System.Drawing.Point(117, 113);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(112, 49);
             this.btnCliente.TabIndex = 1;
@@ -52,11 +53,22 @@
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(117, 201);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(112, 50);
+            this.btnCerrar.TabIndex = 2;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // FrbaHotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 278);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnUsuario);
             this.Name = "FrbaHotel";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Button btnUsuario;
         private System.Windows.Forms.Button btnCliente;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
 

@@ -36,14 +36,14 @@ namespace FrbaHotel.GenerarModificacionReserva
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            FrbaHotel frbaHotel = new FrbaHotel();
+            FrbaHotel frbaHotel = FrbaHotel.obtenerInstancia();
             this.Hide();
             frbaHotel.Show();
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            Login.Login login = new Login.Login();
+            Login.Login login = Login.Login.obtenerInstancia();
             login.Show();
             this.Hide();
         }

@@ -12,9 +12,46 @@ namespace FrbaHotel.Login
 {
     public partial class Login : Form
     {
-        public Login()
+        private DbLogin dbLogin = null;
+
+        private static Login instancia = null;
+
+        public static Login obtenerInstancia()
         {
+            if( instancia == null)
+            {
+                instancia = new Login();
+            }
+            return instancia;
+        }
+
+        private Login()
+        {
+            this.dbLogin = new DbLogin();
             InitializeComponent();
+        }
+        
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            LoginMenu loginMenu = LoginMenu.obtenerInstancia();
+            loginMenu.Show();
+            this.Hide();
+        }
+
+        private void btnLoginCancelar_Click(object sender, EventArgs e)
+        {
+            FrbaHotel.obtenerInstancia().Show();
+            this.Hide();
+        }
+
+        public void validar() {
+            foreach (TextBox tb in this.Controls.OfType<TextBox>())
+            {
+                if( string.IsNullOrEmpty(tb.Text) )
+                {
+                    
+                }
+            }
         }
     }
 }
