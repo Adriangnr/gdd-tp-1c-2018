@@ -45,6 +45,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.btnAltaUsuarioCargar = new System.Windows.Forms.Button();
+            this.btnUsuariosCancelar = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -193,12 +194,24 @@
             this.btnAltaUsuarioCargar.TabIndex = 16;
             this.btnAltaUsuarioCargar.Text = "Cargar nuevo usuario";
             this.btnAltaUsuarioCargar.UseVisualStyleBackColor = true;
+            this.btnAltaUsuarioCargar.Click += new System.EventHandler(this.btnAltaUsuarioCargar_Click);
+            // 
+            // btnUsuariosCancelar
+            // 
+            this.btnUsuariosCancelar.Location = new System.Drawing.Point(562, 540);
+            this.btnUsuariosCancelar.Name = "btnUsuariosCancelar";
+            this.btnUsuariosCancelar.Size = new System.Drawing.Size(124, 39);
+            this.btnUsuariosCancelar.TabIndex = 17;
+            this.btnUsuariosCancelar.Text = "Cancelar";
+            this.btnUsuariosCancelar.UseVisualStyleBackColor = true;
+            this.btnUsuariosCancelar.Click += new System.EventHandler(this.button1_Click);
             // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 605);
+            this.Controls.Add(this.btnUsuariosCancelar);
             this.Controls.Add(this.btnAltaUsuarioCargar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
@@ -242,5 +255,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAltaUsuarioCargar;
+        private System.Windows.Forms.Button btnUsuariosCancelar;
     }
 }

@@ -8,7 +8,18 @@ namespace FrbaHotel.AbmUsuario
     {
         private DbUsuario dbUsuario;
 
-        public AltaUsuario()
+        private static AltaUsuario instancia = null;
+
+        public static AltaUsuario obtenerInstancia()
+        {
+            if( instancia == null)
+            {
+                instancia = new AltaUsuario();
+            }
+            return instancia;
+        }
+
+        private AltaUsuario()
         {
             InitializeComponent();
             this.dbUsuario = new DbUsuario();
@@ -40,6 +51,12 @@ namespace FrbaHotel.AbmUsuario
             {
                 MessageBox.Show("Error al guardar el usuario!");
             }
+        }
+
+        private void btnAltaUsuarioCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Usuarios.obtenerInstancia().Show();
         }
     }
 }

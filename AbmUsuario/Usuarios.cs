@@ -1,18 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using FrbaHotel.Login;
 
 namespace FrbaHotel.AbmUsuario
 {
     public partial class Usuarios : Form
     {
-        public Usuarios()
+        private static Usuarios instancia = null;
+
+        public static Usuarios obtenerInstancia()
+        {
+            if( instancia == null)
+            {
+                instancia = new Usuarios();
+            }
+            return instancia;
+        }
+
+        private Usuarios()
         {
             InitializeComponent();
         }
@@ -20,6 +25,18 @@ namespace FrbaHotel.AbmUsuario
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginMenu.obtenerInstancia().Show();
+        }
+
+        private void btnAltaUsuarioCargar_Click(object sender, EventArgs e)
+        {
+            AltaUsuario.obtenerInstancia().Show();
+            this.Hide();
         }
     }
 }

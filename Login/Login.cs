@@ -33,8 +33,9 @@ namespace FrbaHotel.Login
         
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginMenu loginMenu = LoginMenu.obtenerInstancia();
-            loginMenu.Show();
+            LoginPerfil loginPerfil = LoginPerfil.obtenerInstancia();
+            loginPerfil.Show();
+            
             this.Hide();
         }
 

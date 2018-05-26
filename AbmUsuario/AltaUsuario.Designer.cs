@@ -126,6 +126,7 @@
             this.btnAltaUsuarioCancelar.TabIndex = 10;
             this.btnAltaUsuarioCancelar.Text = "Cancelar";
             this.btnAltaUsuarioCancelar.UseVisualStyleBackColor = true;
+            this.btnAltaUsuarioCancelar.Click += new System.EventHandler(this.btnAltaUsuarioCancelar_Click);
             // 
             // AltaUsuario
             // 
