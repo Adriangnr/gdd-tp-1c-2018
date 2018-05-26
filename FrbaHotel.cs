@@ -24,5 +24,12 @@ namespace FrbaHotel
             this.Hide();
             gmreserva.Show();
         }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            Login.Login login = new Login.Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }

@@ -21,5 +21,31 @@ namespace FrbaHotel.GenerarModificacionReserva
         {
 
         }
+
+        private void txtFiltros_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtHotel.Clear();
+            txtHuespedes.Clear();
+            txtFiltros.Clear();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            FrbaHotel frbaHotel = new FrbaHotel();
+            this.Hide();
+            frbaHotel.Show();
+        }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            Login.Login login = new Login.Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }

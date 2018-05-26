@@ -34,16 +34,17 @@
             // 
             // btnUsuario
             // 
-            this.btnUsuario.Location = new System.Drawing.Point(83, 52);
+            this.btnUsuario.Location = new System.Drawing.Point(122, 63);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(112, 49);
             this.btnUsuario.TabIndex = 0;
             this.btnUsuario.Text = "Usuario";
             this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
             // btnCliente
             // 
-            this.btnCliente.Location = new System.Drawing.Point(83, 140);
+            this.btnCliente.Location = new System.Drawing.Point(122, 151);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(112, 49);
             this.btnCliente.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 244);
+            this.ClientSize = new System.Drawing.Size(348, 278);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnUsuario);
             this.Name = "FrbaHotel";

@@ -44,11 +44,20 @@
             this.btnMasFiltros = new System.Windows.Forms.Button();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.labelTitulo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFiltros = new System.Windows.Forms.TextBox();
             this.comboRegimen = new System.Windows.Forms.ComboBox();
+            this.btnReservar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             fechaHasta = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // fechaHasta
+            // 
+            fechaHasta.Location = new System.Drawing.Point(610, 119);
+            fechaHasta.Name = "fechaHasta";
+            fechaHasta.Size = new System.Drawing.Size(293, 26);
+            fechaHasta.TabIndex = 11;
             // 
             // dataGridView1
             // 
@@ -67,6 +76,7 @@
             this.btnLimpiar.TabIndex = 1;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnBuscar
             // 
@@ -125,13 +135,6 @@
             this.fechaDesde.Size = new System.Drawing.Size(293, 26);
             this.fechaDesde.TabIndex = 9;
             // 
-            // fechaHasta
-            // 
-            fechaHasta.Location = new System.Drawing.Point(610, 119);
-            fechaHasta.Name = "fechaHasta";
-            fechaHasta.Size = new System.Drawing.Size(293, 26);
-            fechaHasta.TabIndex = 11;
-            // 
             // labelRegimen
             // 
             this.labelRegimen.AutoSize = true;
@@ -163,7 +166,7 @@
             // 
             this.btnMasFiltros.Location = new System.Drawing.Point(767, 165);
             this.btnMasFiltros.Name = "btnMasFiltros";
-            this.btnMasFiltros.Size = new System.Drawing.Size(135, 28);
+            this.btnMasFiltros.Size = new System.Drawing.Size(135, 31);
             this.btnMasFiltros.TabIndex = 15;
             this.btnMasFiltros.Text = "Seleccionar";
             this.btnMasFiltros.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -177,6 +180,7 @@
             this.btnIniciarSesion.TabIndex = 16;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // labelTitulo
             // 
@@ -187,12 +191,13 @@
             this.labelTitulo.TabIndex = 17;
             this.labelTitulo.Text = "FrbaHotel";
             // 
-            // textBox1
+            // txtFiltros
             // 
-            this.textBox1.Location = new System.Drawing.Point(610, 167);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 26);
-            this.textBox1.TabIndex = 18;
+            this.txtFiltros.Location = new System.Drawing.Point(610, 167);
+            this.txtFiltros.Name = "txtFiltros";
+            this.txtFiltros.Size = new System.Drawing.Size(135, 26);
+            this.txtFiltros.TabIndex = 18;
+            this.txtFiltros.TextChanged += new System.EventHandler(this.txtFiltros_TextChanged);
             // 
             // comboRegimen
             // 
@@ -202,13 +207,34 @@
             this.comboRegimen.Size = new System.Drawing.Size(290, 28);
             this.comboRegimen.TabIndex = 19;
             // 
+            // btnReservar
+            // 
+            this.btnReservar.Location = new System.Drawing.Point(16, 625);
+            this.btnReservar.Name = "btnReservar";
+            this.btnReservar.Size = new System.Drawing.Size(163, 45);
+            this.btnReservar.TabIndex = 20;
+            this.btnReservar.Text = "Reservar";
+            this.btnReservar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(740, 625);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(163, 45);
+            this.btnSalir.TabIndex = 21;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // GenerarModificarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 618);
+            this.ClientSize = new System.Drawing.Size(914, 682);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnReservar);
             this.Controls.Add(this.comboRegimen);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFiltros);
             this.Controls.Add(this.labelTitulo);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.btnMasFiltros);
@@ -251,7 +277,9 @@
         private System.Windows.Forms.Button btnMasFiltros;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Label labelTitulo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFiltros;
         private System.Windows.Forms.ComboBox comboRegimen;
+        private System.Windows.Forms.Button btnReservar;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
