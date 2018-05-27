@@ -1,6 +1,6 @@
-﻿namespace FrbaHotel.AbmCliente
+﻿namespace FrbaHotel.AbmRegimen
 {
-    partial class Clientes
+    partial class Regimenes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnClientesCancelar = new System.Windows.Forms.Button();
+            this.btnRegimenesCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnClientesCancelar
+            // btnRegimenesCancelar
             // 
-            this.btnClientesCancelar.Location = new System.Drawing.Point(639, 469);
-            this.btnClientesCancelar.Name = "btnClientesCancelar";
-            this.btnClientesCancelar.Size = new System.Drawing.Size(149, 45);
-            this.btnClientesCancelar.TabIndex = 0;
-            this.btnClientesCancelar.Text = "Cancelar";
-            this.btnClientesCancelar.UseVisualStyleBackColor = true;
-            this.btnClientesCancelar.Click += new System.EventHandler(this.btnClientesSalir_Click);
+            this.btnRegimenesCancelar.Location = new System.Drawing.Point(238, 250);
+            this.btnRegimenesCancelar.Name = "btnRegimenesCancelar";
+            this.btnRegimenesCancelar.Size = new System.Drawing.Size(123, 47);
+            this.btnRegimenesCancelar.TabIndex = 0;
+            this.btnRegimenesCancelar.Text = "Cancelar";
+            this.btnRegimenesCancelar.UseVisualStyleBackColor = true;
+            this.btnRegimenesCancelar.Click += new System.EventHandler(this.btnRegimenesSalir_Click);
             // 
-            // Clientes
+            // Regimenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 526);
-            this.Controls.Add(this.btnClientesCancelar);
-            this.Name = "Clientes";
-            this.Text = "Clientes";
-            this.Load += new System.EventHandler(this.Clientes_Load);
+            this.ClientSize = new System.Drawing.Size(373, 309);
+            this.Controls.Add(this.btnRegimenesCancelar);
+            this.Name = "Regimenes";
+            this.Text = "Regimenes";
+            this.Load += new System.EventHandler(this.Regimenes_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnClientesCancelar;
+        private System.Windows.Forms.Button btnRegimenesCancelar;
     }
 }

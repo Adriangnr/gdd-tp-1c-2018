@@ -46,6 +46,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnAltaUsuarioCargar = new System.Windows.Forms.Button();
             this.btnUsuariosCancelar = new System.Windows.Forms.Button();
+            this.labelUsuariosRol = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -152,7 +154,7 @@
             // 
             // btnAltaUsuarioLimpiar
             // 
-            this.btnAltaUsuarioLimpiar.Location = new System.Drawing.Point(17, 212);
+            this.btnAltaUsuarioLimpiar.Location = new System.Drawing.Point(17, 235);
             this.btnAltaUsuarioLimpiar.Name = "btnAltaUsuarioLimpiar";
             this.btnAltaUsuarioLimpiar.Size = new System.Drawing.Size(136, 39);
             this.btnAltaUsuarioLimpiar.TabIndex = 12;
@@ -161,7 +163,7 @@
             // 
             // btnAltaUsuarioBuscar
             // 
-            this.btnAltaUsuarioBuscar.Location = new System.Drawing.Point(551, 212);
+            this.btnAltaUsuarioBuscar.Location = new System.Drawing.Point(551, 235);
             this.btnAltaUsuarioBuscar.Name = "btnAltaUsuarioBuscar";
             this.btnAltaUsuarioBuscar.Size = new System.Drawing.Size(136, 39);
             this.btnAltaUsuarioBuscar.TabIndex = 13;
@@ -180,7 +182,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 277);
+            this.label9.Location = new System.Drawing.Point(13, 286);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 20);
             this.label9.TabIndex = 15;
@@ -206,11 +208,30 @@
             this.btnUsuariosCancelar.UseVisualStyleBackColor = true;
             this.btnUsuariosCancelar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // labelUsuariosRol
+            // 
+            this.labelUsuariosRol.AutoSize = true;
+            this.labelUsuariosRol.Location = new System.Drawing.Point(13, 202);
+            this.labelUsuariosRol.Name = "labelUsuariosRol";
+            this.labelUsuariosRol.Size = new System.Drawing.Size(33, 20);
+            this.labelUsuariosRol.TabIndex = 18;
+            this.labelUsuariosRol.Text = "Rol";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(111, 194);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 28);
+            this.comboBox1.TabIndex = 19;
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 605);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.labelUsuariosRol);
             this.Controls.Add(this.btnUsuariosCancelar);
             this.Controls.Add(this.btnAltaUsuarioCargar);
             this.Controls.Add(this.label9);
@@ -256,5 +277,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAltaUsuarioCargar;
         private System.Windows.Forms.Button btnUsuariosCancelar;
+        private System.Windows.Forms.Label labelUsuariosRol;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

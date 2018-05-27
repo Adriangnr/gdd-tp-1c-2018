@@ -30,8 +30,8 @@
         {
             System.Windows.Forms.DateTimePicker fechaHasta;
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnGenerarModificarReservaLimpiar = new System.Windows.Forms.Button();
+            this.btnGenerarModificarReservaBuscar = new System.Windows.Forms.Button();
             this.labelHotel = new System.Windows.Forms.Label();
             this.labelDesde = new System.Windows.Forms.Label();
             this.labelHuespedes = new System.Windows.Forms.Label();
@@ -41,13 +41,14 @@
             this.labelRegimen = new System.Windows.Forms.Label();
             this.labelHasta = new System.Windows.Forms.Label();
             this.labelMasFiltros = new System.Windows.Forms.Label();
-            this.btnMasFiltros = new System.Windows.Forms.Button();
+            this.btnGenerarModificarReservaMasFiltros = new System.Windows.Forms.Button();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.txtFiltros = new System.Windows.Forms.TextBox();
             this.comboRegimen = new System.Windows.Forms.ComboBox();
-            this.btnReservar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnGenerarModificarReservaReservar = new System.Windows.Forms.Button();
+            this.btnGenerarModificarReservaSalir = new System.Windows.Forms.Button();
+            this.btnGenerarModificarReservaModificar = new System.Windows.Forms.Button();
             fechaHasta = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -68,24 +69,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(886, 285);
             this.dataGridView1.TabIndex = 0;
             // 
-            // btnLimpiar
+            // btnGenerarModificarReservaLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(16, 235);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(142, 45);
-            this.btnLimpiar.TabIndex = 1;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.btnGenerarModificarReservaLimpiar.Location = new System.Drawing.Point(16, 235);
+            this.btnGenerarModificarReservaLimpiar.Name = "btnGenerarModificarReservaLimpiar";
+            this.btnGenerarModificarReservaLimpiar.Size = new System.Drawing.Size(142, 45);
+            this.btnGenerarModificarReservaLimpiar.TabIndex = 1;
+            this.btnGenerarModificarReservaLimpiar.Text = "Limpiar";
+            this.btnGenerarModificarReservaLimpiar.UseVisualStyleBackColor = true;
+            this.btnGenerarModificarReservaLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // btnBuscar
+            // btnGenerarModificarReservaBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(774, 235);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(128, 45);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnGenerarModificarReservaBuscar.Location = new System.Drawing.Point(774, 235);
+            this.btnGenerarModificarReservaBuscar.Name = "btnGenerarModificarReservaBuscar";
+            this.btnGenerarModificarReservaBuscar.Size = new System.Drawing.Size(128, 45);
+            this.btnGenerarModificarReservaBuscar.TabIndex = 2;
+            this.btnGenerarModificarReservaBuscar.Text = "Buscar";
+            this.btnGenerarModificarReservaBuscar.UseVisualStyleBackColor = true;
             // 
             // labelHotel
             // 
@@ -162,15 +163,15 @@
             this.labelMasFiltros.TabIndex = 14;
             this.labelMasFiltros.Text = "Mas Filtros";
             // 
-            // btnMasFiltros
+            // btnGenerarModificarReservaMasFiltros
             // 
-            this.btnMasFiltros.Location = new System.Drawing.Point(767, 165);
-            this.btnMasFiltros.Name = "btnMasFiltros";
-            this.btnMasFiltros.Size = new System.Drawing.Size(135, 31);
-            this.btnMasFiltros.TabIndex = 15;
-            this.btnMasFiltros.Text = "Seleccionar";
-            this.btnMasFiltros.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMasFiltros.UseVisualStyleBackColor = true;
+            this.btnGenerarModificarReservaMasFiltros.Location = new System.Drawing.Point(767, 165);
+            this.btnGenerarModificarReservaMasFiltros.Name = "btnGenerarModificarReservaMasFiltros";
+            this.btnGenerarModificarReservaMasFiltros.Size = new System.Drawing.Size(135, 31);
+            this.btnGenerarModificarReservaMasFiltros.TabIndex = 15;
+            this.btnGenerarModificarReservaMasFiltros.Text = "Seleccionar";
+            this.btnGenerarModificarReservaMasFiltros.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGenerarModificarReservaMasFiltros.UseVisualStyleBackColor = true;
             // 
             // btnIniciarSesion
             // 
@@ -207,37 +208,48 @@
             this.comboRegimen.Size = new System.Drawing.Size(290, 28);
             this.comboRegimen.TabIndex = 19;
             // 
-            // btnReservar
+            // btnGenerarModificarReservaReservar
             // 
-            this.btnReservar.Location = new System.Drawing.Point(16, 625);
-            this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(163, 45);
-            this.btnReservar.TabIndex = 20;
-            this.btnReservar.Text = "Reservar";
-            this.btnReservar.UseVisualStyleBackColor = true;
+            this.btnGenerarModificarReservaReservar.Location = new System.Drawing.Point(16, 625);
+            this.btnGenerarModificarReservaReservar.Name = "btnGenerarModificarReservaReservar";
+            this.btnGenerarModificarReservaReservar.Size = new System.Drawing.Size(163, 45);
+            this.btnGenerarModificarReservaReservar.TabIndex = 20;
+            this.btnGenerarModificarReservaReservar.Text = "Reservar";
+            this.btnGenerarModificarReservaReservar.UseVisualStyleBackColor = true;
             // 
-            // btnSalir
+            // btnGenerarModificarReservaSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(740, 625);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(163, 45);
-            this.btnSalir.TabIndex = 21;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnGenerarModificarReservaSalir.Location = new System.Drawing.Point(740, 625);
+            this.btnGenerarModificarReservaSalir.Name = "btnGenerarModificarReservaSalir";
+            this.btnGenerarModificarReservaSalir.Size = new System.Drawing.Size(163, 45);
+            this.btnGenerarModificarReservaSalir.TabIndex = 21;
+            this.btnGenerarModificarReservaSalir.Text = "Salir";
+            this.btnGenerarModificarReservaSalir.UseVisualStyleBackColor = true;
+            this.btnGenerarModificarReservaSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnGenerarModificarReservaModificar
+            // 
+            this.btnGenerarModificarReservaModificar.Location = new System.Drawing.Point(379, 626);
+            this.btnGenerarModificarReservaModificar.Name = "btnGenerarModificarReservaModificar";
+            this.btnGenerarModificarReservaModificar.Size = new System.Drawing.Size(168, 44);
+            this.btnGenerarModificarReservaModificar.TabIndex = 22;
+            this.btnGenerarModificarReservaModificar.Text = "Modificar Reserva";
+            this.btnGenerarModificarReservaModificar.UseVisualStyleBackColor = true;
+            this.btnGenerarModificarReservaModificar.Click += new System.EventHandler(this.btnGenerarModificarReservaModificar_Click);
             // 
             // GenerarModificarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 682);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnReservar);
+            this.Controls.Add(this.btnGenerarModificarReservaModificar);
+            this.Controls.Add(this.btnGenerarModificarReservaSalir);
+            this.Controls.Add(this.btnGenerarModificarReservaReservar);
             this.Controls.Add(this.comboRegimen);
             this.Controls.Add(this.txtFiltros);
             this.Controls.Add(this.labelTitulo);
             this.Controls.Add(this.btnIniciarSesion);
-            this.Controls.Add(this.btnMasFiltros);
+            this.Controls.Add(this.btnGenerarModificarReservaMasFiltros);
             this.Controls.Add(this.labelMasFiltros);
             this.Controls.Add(this.labelHasta);
             this.Controls.Add(this.labelRegimen);
@@ -248,8 +260,8 @@
             this.Controls.Add(this.labelHuespedes);
             this.Controls.Add(this.labelDesde);
             this.Controls.Add(this.labelHotel);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnGenerarModificarReservaBuscar);
+            this.Controls.Add(this.btnGenerarModificarReservaLimpiar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "GenerarModificarReserva";
             this.Text = "GenerarModificarReserva";
@@ -263,8 +275,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnGenerarModificarReservaLimpiar;
+        private System.Windows.Forms.Button btnGenerarModificarReservaBuscar;
         private System.Windows.Forms.Label labelHotel;
         private System.Windows.Forms.Label labelDesde;
         private System.Windows.Forms.Label labelHuespedes;
@@ -274,12 +286,13 @@
         private System.Windows.Forms.Label labelRegimen;
         private System.Windows.Forms.Label labelHasta;
         private System.Windows.Forms.Label labelMasFiltros;
-        private System.Windows.Forms.Button btnMasFiltros;
+        private System.Windows.Forms.Button btnGenerarModificarReservaMasFiltros;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.TextBox txtFiltros;
         private System.Windows.Forms.ComboBox comboRegimen;
-        private System.Windows.Forms.Button btnReservar;
-        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnGenerarModificarReservaReservar;
+        private System.Windows.Forms.Button btnGenerarModificarReservaSalir;
+        private System.Windows.Forms.Button btnGenerarModificarReservaModificar;
     }
 }

@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using FrbaHotel.AbmUsuario;
 
 namespace FrbaHotel
 {
@@ -31,17 +23,13 @@ namespace FrbaHotel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GenerarModificacionReserva.GenerarModificarReserva gmreserva =
-                new GenerarModificacionReserva.GenerarModificarReserva();
-            this.Hide();
-            gmreserva.Show();
+            FormUtils.FormUtils.mostarForm(this, 
+                GenerarModificacionReserva.GenerarModificarReserva.obtenerInstancia());
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            Login.Login login = Login.Login.obtenerInstancia();
-            login.Show();
-            this.Hide();
+            FormUtils.FormUtils.mostarForm(this, Login.Login.obtenerInstancia());
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

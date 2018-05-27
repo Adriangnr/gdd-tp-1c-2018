@@ -1,6 +1,6 @@
-﻿namespace FrbaHotel.AbmCliente
+﻿namespace FrbaHotel.AbmHabitacion
 {
-    partial class Clientes
+    partial class Habitaciones
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnClientesCancelar = new System.Windows.Forms.Button();
+            this.btnHabitacionesCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnClientesCancelar
+            // btnHabitacionesCancelar
             // 
-            this.btnClientesCancelar.Location = new System.Drawing.Point(639, 469);
-            this.btnClientesCancelar.Name = "btnClientesCancelar";
-            this.btnClientesCancelar.Size = new System.Drawing.Size(149, 45);
-            this.btnClientesCancelar.TabIndex = 0;
-            this.btnClientesCancelar.Text = "Cancelar";
-            this.btnClientesCancelar.UseVisualStyleBackColor = true;
-            this.btnClientesCancelar.Click += new System.EventHandler(this.btnClientesSalir_Click);
+            this.btnHabitacionesCancelar.Location = new System.Drawing.Point(241, 245);
+            this.btnHabitacionesCancelar.Name = "btnHabitacionesCancelar";
+            this.btnHabitacionesCancelar.Size = new System.Drawing.Size(129, 44);
+            this.btnHabitacionesCancelar.TabIndex = 0;
+            this.btnHabitacionesCancelar.Text = "Cancelar";
+            this.btnHabitacionesCancelar.UseVisualStyleBackColor = true;
+            this.btnHabitacionesCancelar.Click += new System.EventHandler(this.btnHabitacionesSalir_Click);
             // 
-            // Clientes
+            // Habitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 526);
-            this.Controls.Add(this.btnClientesCancelar);
-            this.Name = "Clientes";
-            this.Text = "Clientes";
-            this.Load += new System.EventHandler(this.Clientes_Load);
+            this.ClientSize = new System.Drawing.Size(382, 301);
+            this.Controls.Add(this.btnHabitacionesCancelar);
+            this.Name = "Habitaciones";
+            this.Text = "Habitaciones";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnClientesCancelar;
+        private System.Windows.Forms.Button btnHabitacionesCancelar;
     }
 }

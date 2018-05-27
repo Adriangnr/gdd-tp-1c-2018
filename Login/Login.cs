@@ -41,8 +41,7 @@ namespace FrbaHotel.Login
 
         private void btnLoginCancelar_Click(object sender, EventArgs e)
         {
-            FrbaHotel.obtenerInstancia().Show();
-            this.Hide();
+            FormUtils.FormUtils.ocultarForm();
         }
 
         public void validar() {

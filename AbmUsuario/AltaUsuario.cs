@@ -58,5 +58,10 @@ namespace FrbaHotel.AbmUsuario
             this.Hide();
             Usuarios.obtenerInstancia().Show();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

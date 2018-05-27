@@ -1,6 +1,6 @@
-﻿namespace FrbaHotel.AbmCliente
+﻿namespace FrbaHotel.CancelarReserva
 {
-    partial class Clientes
+    partial class CancelarReserva
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnClientesCancelar = new System.Windows.Forms.Button();
+            this.btnCancelarReservaCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnClientesCancelar
+            // btnCancelarReservaCancelar
             // 
-            this.btnClientesCancelar.Location = new System.Drawing.Point(639, 469);
-            this.btnClientesCancelar.Name = "btnClientesCancelar";
-            this.btnClientesCancelar.Size = new System.Drawing.Size(149, 45);
-            this.btnClientesCancelar.TabIndex = 0;
-            this.btnClientesCancelar.Text = "Cancelar";
-            this.btnClientesCancelar.UseVisualStyleBackColor = true;
-            this.btnClientesCancelar.Click += new System.EventHandler(this.btnClientesSalir_Click);
+            this.btnCancelarReservaCancelar.Location = new System.Drawing.Point(247, 254);
+            this.btnCancelarReservaCancelar.Name = "btnCancelarReservaCancelar";
+            this.btnCancelarReservaCancelar.Size = new System.Drawing.Size(131, 45);
+            this.btnCancelarReservaCancelar.TabIndex = 0;
+            this.btnCancelarReservaCancelar.Text = "Cancelar";
+            this.btnCancelarReservaCancelar.UseVisualStyleBackColor = true;
             // 
-            // Clientes
+            // CancelarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 526);
-            this.Controls.Add(this.btnClientesCancelar);
-            this.Name = "Clientes";
-            this.Text = "Clientes";
-            this.Load += new System.EventHandler(this.Clientes_Load);
+            this.ClientSize = new System.Drawing.Size(390, 311);
+            this.Controls.Add(this.btnCancelarReservaCancelar);
+            this.Name = "CancelarReserva";
+            this.Text = "Cancelar Reserva";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnClientesCancelar;
+        private System.Windows.Forms.Button btnCancelarReservaCancelar;
     }
 }

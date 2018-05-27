@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
 using FrbaHotel.AbmUsuario;
+using FrbaHotel.AbmRol;
+using FrbaHotel.AbmCliente;
+using FrbaHotel.AbmHotel;
+using FrbaHotel.AbmRegimen;
+using FrbaHotel.AbmHabitacion;
 
 namespace FrbaHotel.Login
 {
@@ -35,13 +40,50 @@ namespace FrbaHotel.Login
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Usuarios.obtenerInstancia().Show();
             this.Hide();
+            Usuarios.obtenerInstancia().Show();
         }
 
         private void btnLoginMenuClientes_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Clientes.obtenerInstancia().Show();
+        }
 
+        private void btnLoginMenuRoles_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Roles.obtenerInstancia().Show();
+        }
+
+        private void btnLoginMenuHoteles_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Hoteles.obtenerInstancia().Show();
+        }
+
+        private void btnLoginMenuRegimenes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Regimenes.obtenerInstancia().Show();
+        }
+
+        private void btnLoginMenuReservas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Reservas.Reservas.obtenerInstancia().Show();
+        }
+
+        private void btnLoginMenuHabitaciones_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Habitaciones.obtenerInstancia().Show();
+        }
+
+        private void btnLoginMenuEstadisticas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ListadoEstadistico.ListadoEstadistico.obtenerInstancia().Show();
         }
     }
 }
