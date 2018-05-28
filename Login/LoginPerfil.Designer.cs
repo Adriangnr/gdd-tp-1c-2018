@@ -74,6 +74,7 @@
             this.Controls.Add(this.comboLoginPerfil);
             this.Controls.Add(this.labelLoginPerfil);
             this.Name = "LoginPerfil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginPerfil";
             this.ResumeLayout(false);
             this.PerformLayout();

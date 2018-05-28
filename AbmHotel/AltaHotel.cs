@@ -12,9 +12,31 @@ namespace FrbaHotel.AbmHotel
 {
     public partial class AltaHotel : Form
     {
-        public AltaHotel()
+        private static AltaHotel instancia = null;
+
+        public static AltaHotel obtenerInstancia()
+        {
+            if (instancia == null)
+            {
+                instancia = new AltaHotel();
+            }
+            return instancia;
+        }
+
+        private AltaHotel()
         {
             InitializeComponent();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAltaHotelCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Hoteles.obtenerInstancia().Show();
         }
     }
 }

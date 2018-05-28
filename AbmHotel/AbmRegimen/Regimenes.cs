@@ -28,7 +28,8 @@ namespace FrbaHotel.AbmRegimen
 
         private void btnRegimenesSalir_Click(object sender, EventArgs e)
         {
-            FormUtils.FormUtils.ocultarForm();
+            this.Hide();
+            Login.LoginMenu.obtenerInstancia().Show();
         }
     }
 }

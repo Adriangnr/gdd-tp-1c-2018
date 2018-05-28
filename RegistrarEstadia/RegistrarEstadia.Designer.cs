@@ -1,6 +1,6 @@
-﻿namespace FrbaHotel.AbmRegimen
+﻿namespace FrbaHotel.RegistrarEstadia
 {
-    partial class Regimenes
+    partial class RegistrarEstadia
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRegimenesCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnRegimenesCancelar
-            // 
-            this.btnRegimenesCancelar.Location = new System.Drawing.Point(238, 250);
-            this.btnRegimenesCancelar.Name = "btnRegimenesCancelar";
-            this.btnRegimenesCancelar.Size = new System.Drawing.Size(123, 47);
-            this.btnRegimenesCancelar.TabIndex = 0;
-            this.btnRegimenesCancelar.Text = "Cancelar";
-            this.btnRegimenesCancelar.UseVisualStyleBackColor = true;
-            this.btnRegimenesCancelar.Click += new System.EventHandler(this.btnRegimenesSalir_Click);
-            // 
-            // Regimenes
+            // RegistrarEstadia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 309);
-            this.Controls.Add(this.btnRegimenesCancelar);
-            this.Name = "Regimenes";
-            this.Text = "Regimenes";
-            this.Load += new System.EventHandler(this.Regimenes_Load);
+            this.ClientSize = new System.Drawing.Size(407, 358);
+            this.Name = "RegistrarEstadia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registrar Estadia";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnRegimenesCancelar;
     }
 }

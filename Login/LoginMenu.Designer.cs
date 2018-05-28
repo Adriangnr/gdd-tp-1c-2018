@@ -42,7 +42,7 @@
             // 
             // btnLoginMenuSalir
             // 
-            this.btnLoginMenuSalir.Location = new System.Drawing.Point(438, 338);
+            this.btnLoginMenuSalir.Location = new System.Drawing.Point(438, 488);
             this.btnLoginMenuSalir.Name = "btnLoginMenuSalir";
             this.btnLoginMenuSalir.Size = new System.Drawing.Size(133, 49);
             this.btnLoginMenuSalir.TabIndex = 0;
@@ -76,7 +76,7 @@
             this.btnLoginMenuRegimenes.Name = "btnLoginMenuRegimenes";
             this.btnLoginMenuRegimenes.Size = new System.Drawing.Size(247, 54);
             this.btnLoginMenuRegimenes.TabIndex = 3;
-            this.btnLoginMenuRegimenes.Text = "Regimenes";
+            this.btnLoginMenuRegimenes.Text = "Régimenes";
             this.btnLoginMenuRegimenes.UseVisualStyleBackColor = true;
             this.btnLoginMenuRegimenes.Click += new System.EventHandler(this.btnLoginMenuRegimenes_Click);
             // 
@@ -144,7 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 399);
+            this.ClientSize = new System.Drawing.Size(592, 549);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLoginMenuRoles);
             this.Controls.Add(this.btnLoginMenuHoteles);
@@ -156,6 +156,7 @@
             this.Controls.Add(this.btnLoginMenuClientes);
             this.Controls.Add(this.btnLoginMenuSalir);
             this.Name = "LoginMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginMenu";
             this.Load += new System.EventHandler(this.LoginMenu_Load);
             this.ResumeLayout(false);

@@ -1,6 +1,6 @@
-﻿namespace FrbaHotel.ListadoEstadistico
+﻿namespace FrbaHotel.AbmRegimen
 {
-    partial class ListadoEstadistico
+    partial class Regimenes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnListadoEstadisticoCancelar = new System.Windows.Forms.Button();
+            this.btnRegimenesCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnListadoEstadisticoCancelar
+            // btnRegimenesCancelar
             // 
-            this.btnListadoEstadisticoCancelar.Location = new System.Drawing.Point(290, 254);
-            this.btnListadoEstadisticoCancelar.Name = "btnListadoEstadisticoCancelar";
-            this.btnListadoEstadisticoCancelar.Size = new System.Drawing.Size(141, 44);
-            this.btnListadoEstadisticoCancelar.TabIndex = 0;
-            this.btnListadoEstadisticoCancelar.Text = "Cancelar";
-            this.btnListadoEstadisticoCancelar.UseVisualStyleBackColor = true;
-            this.btnListadoEstadisticoCancelar.Click += new System.EventHandler(this.btnListadoEstadisticoCancelar_Click);
+            this.btnRegimenesCancelar.Location = new System.Drawing.Point(238, 250);
+            this.btnRegimenesCancelar.Name = "btnRegimenesCancelar";
+            this.btnRegimenesCancelar.Size = new System.Drawing.Size(123, 47);
+            this.btnRegimenesCancelar.TabIndex = 0;
+            this.btnRegimenesCancelar.Text = "Cancelar";
+            this.btnRegimenesCancelar.UseVisualStyleBackColor = true;
+            this.btnRegimenesCancelar.Click += new System.EventHandler(this.btnRegimenesSalir_Click);
             // 
-            // ListadoEstadistico
+            // Regimenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 310);
-            this.Controls.Add(this.btnListadoEstadisticoCancelar);
-            this.Name = "ListadoEstadistico";
+            this.ClientSize = new System.Drawing.Size(373, 309);
+            this.Controls.Add(this.btnRegimenesCancelar);
+            this.Name = "Regimenes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado Estadistico";
+            this.Text = "Regimenes";
+            this.Load += new System.EventHandler(this.Regimenes_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnListadoEstadisticoCancelar;
+        private System.Windows.Forms.Button btnRegimenesCancelar;
     }
 }

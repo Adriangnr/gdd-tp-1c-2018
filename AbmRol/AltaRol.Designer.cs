@@ -175,6 +175,7 @@
             this.btnAltaUsuarioCancelar.TabIndex = 14;
             this.btnAltaUsuarioCancelar.Text = "Cancelar";
             this.btnAltaUsuarioCancelar.UseVisualStyleBackColor = true;
+            this.btnAltaUsuarioCancelar.Click += new System.EventHandler(this.btnAltaUsuarioCancelar_Click);
             // 
             // btnAltaUsuarioGuardar
             // 
@@ -217,6 +218,7 @@
             this.Controls.Add(this.labelAltaRol);
             this.Controls.Add(this.labelFrbaHotelAltaRol);
             this.Name = "AltaRol";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaRol";
             this.ResumeLayout(false);
             this.PerformLayout();

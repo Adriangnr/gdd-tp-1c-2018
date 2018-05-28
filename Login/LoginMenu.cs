@@ -71,6 +71,7 @@ namespace FrbaHotel.Login
         private void btnLoginMenuReservas_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Reservas.Reservas.obtenerInstancia().caller = this;
             Reservas.Reservas.obtenerInstancia().Show();
         }
 

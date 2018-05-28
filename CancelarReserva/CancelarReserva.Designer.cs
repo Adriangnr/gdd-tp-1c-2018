@@ -47,6 +47,7 @@
             this.ClientSize = new System.Drawing.Size(390, 311);
             this.Controls.Add(this.btnCancelarReservaCancelar);
             this.Name = "CancelarReserva";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cancelar Reserva";
             this.ResumeLayout(false);
 

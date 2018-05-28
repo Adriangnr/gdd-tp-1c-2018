@@ -264,6 +264,7 @@
             this.Controls.Add(this.btnGenerarModificarReservaLimpiar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "GenerarModificarReserva";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenerarModificarReserva";
             this.Load += new System.EventHandler(this.GenerarModificarReserva_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

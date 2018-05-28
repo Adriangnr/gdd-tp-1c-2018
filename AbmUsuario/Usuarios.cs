@@ -29,7 +29,8 @@ namespace FrbaHotel.AbmUsuario
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormUtils.FormUtils.ocultarForm();
+            this.Hide();
+            LoginMenu.obtenerInstancia().Show();
         }
 
         private void btnAltaUsuarioCargar_Click(object sender, EventArgs e)

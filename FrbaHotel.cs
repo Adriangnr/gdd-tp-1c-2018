@@ -23,13 +23,14 @@ namespace FrbaHotel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormUtils.FormUtils.mostarForm(this, 
-                GenerarModificacionReserva.GenerarModificarReserva.obtenerInstancia());
+            this.Hide();
+            GenerarModificacionReserva.GenerarModificarReserva.obtenerInstancia().Show();
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            FormUtils.FormUtils.mostarForm(this, Login.Login.obtenerInstancia());
+            this.Hide();
+            Login.Login.obtenerInstancia().Show();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

@@ -72,6 +72,7 @@
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnUsuario);
             this.Name = "FrbaHotel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrbaHotel";
             this.ResumeLayout(false);
 

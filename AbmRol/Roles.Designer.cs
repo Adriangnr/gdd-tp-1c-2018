@@ -95,6 +95,7 @@
             this.Controls.Add(this.labelRoles);
             this.Controls.Add(this.labelFrbaHotelRoles);
             this.Name = "Roles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Roles";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRoles)).EndInit();
             this.ResumeLayout(false);

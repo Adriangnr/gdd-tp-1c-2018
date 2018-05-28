@@ -40,7 +40,8 @@ namespace FrbaHotel.GenerarModificacionReserva
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            FormUtils.FormUtils.ocultarForm();
+            this.Hide();
+            FrbaHotel.obtenerInstancia().Show();
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)

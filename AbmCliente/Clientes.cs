@@ -29,7 +29,14 @@ namespace FrbaHotel.AbmCliente
 
         private void btnClientesSalir_Click(object sender, EventArgs e)
         {
-            FormUtils.FormUtils.ocultarForm();
+            this.Hide();
+            Login.LoginMenu.obtenerInstancia().Show();
+        }
+
+        private void btnClientesCargar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            txtAltaClienteApellido.obtenerInstancia().Show();
         }
     }
 }

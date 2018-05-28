@@ -32,5 +32,11 @@ namespace FrbaHotel.AbmRol
         {
 
         }
+
+        private void btnAltaUsuarioCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Roles.obtenerInstancia().Show();
+        }
     }
 }

@@ -56,6 +56,24 @@
     <Compile Include="AbmCliente\AltaCliente.Designer.cs">
       <DependentUpon>AltaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="AbmEmpleados\AltaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmEmpleados\AltaEmpleado.Designer.cs">
+      <DependentUpon>AltaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmEmpleados\Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmEmpleados\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmHabitacion\AltaHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmHabitacion\AltaHabitacion.Designer.cs">
+      <DependentUpon>AltaHabitacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="AbmHabitacion\Habitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,10 +92,10 @@
     <Compile Include="AbmHotel\Hoteles.Designer.cs">
       <DependentUpon>Hoteles.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbmRegimen\Regimenes.cs">
+    <Compile Include="AbmHotel\AbmRegimen\Regimenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbmRegimen\Regimenes.Designer.cs">
+    <Compile Include="AbmHotel\AbmRegimen\Regimenes.Designer.cs">
       <DependentUpon>Regimenes.cs</DependentUpon>
     </Compile>
     <Compile Include="AbmRol\AltaRol.cs">
@@ -112,7 +130,6 @@
       <DependentUpon>CancelarReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="ConectorDB\ConectorDb.cs" />
-    <Compile Include="FormUtils\FormUtils.cs" />
     <Compile Include="FrbaHotel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,17 +175,17 @@
     <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistrarConsumible\Form1.cs">
+    <Compile Include="RegistrarConsumible\RegistrarConsumible.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrarConsumible\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="RegistrarConsumible\RegistrarConsumible.Designer.cs">
+      <DependentUpon>RegistrarConsumible.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistrarEstadia\Form1.cs">
+    <Compile Include="RegistrarEstadia\RegistrarEstadia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrarEstadia\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="RegistrarEstadia\RegistrarEstadia.Designer.cs">
+      <DependentUpon>RegistrarEstadia.cs</DependentUpon>
     </Compile>
     <Compile Include="Reservas\Reservas.cs">
       <SubType>Form</SubType>
@@ -183,13 +200,25 @@
     <EmbeddedResource Include="AbmCliente\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AbmEmpleados\AltaEmpleado.resx">
+      <DependentUpon>AltaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmEmpleados\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmHabitacion\AltaHabitacion.resx">
+      <DependentUpon>AltaHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AbmHabitacion\Habitaciones.resx">
       <DependentUpon>Habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmHotel\AltaHotel.resx">
+      <DependentUpon>AltaHotel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmHotel\Hoteles.resx">
       <DependentUpon>Hoteles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AbmRegimen\Regimenes.resx">
+    <EmbeddedResource Include="AbmHotel\AbmRegimen\Regimenes.resx">
       <DependentUpon>Regimenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmRol\AltaRol.resx">
@@ -234,6 +263,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistrarConsumible\RegistrarConsumible.resx">
+      <DependentUpon>RegistrarConsumible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarEstadia\RegistrarEstadia.resx">
+      <DependentUpon>RegistrarEstadia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reservas\Reservas.resx">
       <DependentUpon>Reservas.cs</DependentUpon>
     </EmbeddedResource>

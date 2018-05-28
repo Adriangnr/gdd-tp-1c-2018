@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FrbaHotel.Login
@@ -33,15 +27,14 @@ namespace FrbaHotel.Login
         
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginPerfil loginPerfil = LoginPerfil.obtenerInstancia();
-            loginPerfil.Show();
-            
             this.Hide();
+            LoginPerfil.obtenerInstancia().Show();
         }
 
         private void btnLoginCancelar_Click(object sender, EventArgs e)
         {
-            FormUtils.FormUtils.ocultarForm();
+            this.Hide();
+            FrbaHotel.obtenerInstancia().Show();
         }
 
         public void validar() {

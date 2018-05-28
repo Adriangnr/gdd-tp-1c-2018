@@ -29,7 +29,8 @@ namespace FrbaHotel.AbmRol
 
         private void btnAltaRolesCancelar_Click(object sender, EventArgs e)
         {
-            FormUtils.FormUtils.ocultarForm();
+            this.Hide();
+            LoginMenu.obtenerInstancia().Show();
         }
 
         private void btnRolesCargar_Click(object sender, EventArgs e)

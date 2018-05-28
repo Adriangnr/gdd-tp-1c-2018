@@ -101,6 +101,7 @@
             this.Controls.Add(this.labelContrasenia);
             this.Controls.Add(this.labelUsuario);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -18,5 +18,11 @@ namespace FrbaHotel.ListadoEstadistico
         {
             InitializeComponent();
         }
+
+        private void btnListadoEstadisticoCancelar_Click(object sender, System.EventArgs e)
+        {
+            this.Hide();
+            Login.LoginMenu.obtenerInstancia().Show();
+        }
     }
 }
