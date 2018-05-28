@@ -98,6 +98,18 @@
     <Compile Include="AbmHotel\AbmRegimen\Regimenes.Designer.cs">
       <DependentUpon>Regimenes.cs</DependentUpon>
     </Compile>
+    <Compile Include="AbmRegimenes\AltaRegimen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRegimenes\AltaRegimen.Designer.cs">
+      <DependentUpon>AltaRegimen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmRegimenes\Regimenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRegimenes\Regimenes.Designer.cs">
+      <DependentUpon>Regimenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="AbmRol\AltaRol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,12 @@
     </Compile>
     <Compile Include="GenerarModificacionReserva\GenerarModificarReserva.Designer.cs">
       <DependentUpon>GenerarModificarReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\Reservar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\Reservar.Designer.cs">
+      <DependentUpon>Reservar.cs</DependentUpon>
     </Compile>
     <Compile Include="ListadoEstadistico\ListadoEstadistico.cs">
       <SubType>Form</SubType>
@@ -219,6 +237,12 @@
       <DependentUpon>Hoteles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmHotel\AbmRegimen\Regimenes.resx">
+      <DependentUpon>Regimenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRegimenes\AltaRegimen.resx">
+      <DependentUpon>AltaRegimen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRegimenes\Regimenes.resx">
       <DependentUpon>Regimenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmRol\AltaRol.resx">
