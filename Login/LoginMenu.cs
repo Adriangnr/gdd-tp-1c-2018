@@ -4,12 +4,12 @@ using FrbaHotel.AbmUsuario;
 using FrbaHotel.AbmRol;
 using FrbaHotel.AbmCliente;
 using FrbaHotel.AbmHotel;
-using FrbaHotel.AbmRegimen;
 using FrbaHotel.AbmHabitacion;
+using FrbaHotel.AbmRegimenes;
 
 namespace FrbaHotel.Login
 {
-    public partial class LoginMenu : Form
+    public partial class LoginMenu : ParentForm
     {
         private static LoginMenu instancia = null;
 

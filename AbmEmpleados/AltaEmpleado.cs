@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FrbaHotel.AbmEmpleados
 {
-    public partial class AltaEmpleado : Form
+    public partial class AltaEmpleado : ParentForm
     {
         private static AltaEmpleado instancia = null;
 

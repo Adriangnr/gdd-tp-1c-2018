@@ -48,7 +48,7 @@
             // labelRoles
             // 
             this.labelRoles.AutoSize = true;
-            this.labelRoles.Location = new System.Drawing.Point(491, 13);
+            this.labelRoles.Location = new System.Drawing.Point(536, 13);
             this.labelRoles.Name = "labelRoles";
             this.labelRoles.Size = new System.Drawing.Size(50, 20);
             this.labelRoles.TabIndex = 1;
@@ -57,10 +57,10 @@
             // dataGridRoles
             // 
             this.dataGridRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridRoles.Location = new System.Drawing.Point(17, 88);
+            this.dataGridRoles.Location = new System.Drawing.Point(17, 86);
             this.dataGridRoles.Name = "dataGridRoles";
             this.dataGridRoles.RowTemplate.Height = 28;
-            this.dataGridRoles.Size = new System.Drawing.Size(524, 224);
+            this.dataGridRoles.Size = new System.Drawing.Size(569, 224);
             this.dataGridRoles.TabIndex = 2;
             this.dataGridRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridRoles_CellContentClick);
             // 
@@ -76,7 +76,7 @@
             // 
             // btnAltaRolesCancelar
             // 
-            this.btnAltaRolesCancelar.Location = new System.Drawing.Point(424, 351);
+            this.btnAltaRolesCancelar.Location = new System.Drawing.Point(469, 351);
             this.btnAltaRolesCancelar.Name = "btnAltaRolesCancelar";
             this.btnAltaRolesCancelar.Size = new System.Drawing.Size(117, 41);
             this.btnAltaRolesCancelar.TabIndex = 4;
@@ -88,15 +88,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 404);
+            this.ClientSize = new System.Drawing.Size(607, 404);
             this.Controls.Add(this.btnAltaRolesCancelar);
             this.Controls.Add(this.btnRolesCargar);
             this.Controls.Add(this.dataGridRoles);
             this.Controls.Add(this.labelRoles);
             this.Controls.Add(this.labelFrbaHotelRoles);
             this.Name = "Roles";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Roles";
+            this.Controls.SetChildIndex(this.labelFrbaHotelRoles, 0);
+            this.Controls.SetChildIndex(this.labelRoles, 0);
+            this.Controls.SetChildIndex(this.dataGridRoles, 0);
+            this.Controls.SetChildIndex(this.btnRolesCargar, 0);
+            this.Controls.SetChildIndex(this.btnAltaRolesCancelar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRoles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

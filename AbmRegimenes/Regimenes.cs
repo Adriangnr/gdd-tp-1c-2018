@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FrbaHotel.AbmRegimenes
 {
-    public partial class Regimenes : Form
+    public partial class Regimenes : ParentForm
     {
         private static Regimenes instancia = null;
 

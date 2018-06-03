@@ -28,40 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelFrbaHotelAltaRol = new System.Windows.Forms.Label();
-            this.labelAltaRol = new System.Windows.Forms.Label();
+            System.Windows.Forms.TextBox txtAltaRolNombre;
             this.labelAltaRolNombre = new System.Windows.Forms.Label();
-            this.txtAltaRolNombre = new System.Windows.Forms.TextBox();
             this.labelAltaRolFuncionalidades = new System.Windows.Forms.Label();
-            this.chkAltaRolFuncClientes = new System.Windows.Forms.CheckBox();
-            this.chkAltaRolFuncHab = new System.Windows.Forms.CheckBox();
-            this.chckAltaRolFuncUsuarios = new System.Windows.Forms.CheckBox();
-            this.chkAltaRolFuncEstadisticas = new System.Windows.Forms.CheckBox();
-            this.chkAltaRolFuncRegimenes = new System.Windows.Forms.CheckBox();
-            this.chkAltaRolFuncReservas = new System.Windows.Forms.CheckBox();
             this.chkAltaRolActivo = new System.Windows.Forms.CheckBox();
             this.btnAltaUsuarioCancelar = new System.Windows.Forms.Button();
-            this.btnAltaUsuarioGuardar = new System.Windows.Forms.Button();
-            this.chkAltaRolFuncHoteles = new System.Windows.Forms.CheckBox();
+            this.btnAltaRolGuardar = new System.Windows.Forms.Button();
+            this.chkListFuncionalidades = new System.Windows.Forms.CheckedListBox();
+            txtAltaRolNombre = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // labelFrbaHotelAltaRol
+            // txtAltaRolNombre
             // 
-            this.labelFrbaHotelAltaRol.AutoSize = true;
-            this.labelFrbaHotelAltaRol.Location = new System.Drawing.Point(13, 13);
-            this.labelFrbaHotelAltaRol.Name = "labelFrbaHotelAltaRol";
-            this.labelFrbaHotelAltaRol.Size = new System.Drawing.Size(80, 20);
-            this.labelFrbaHotelAltaRol.TabIndex = 0;
-            this.labelFrbaHotelAltaRol.Text = "FrbaHotel";
-            // 
-            // labelAltaRol
-            // 
-            this.labelAltaRol.AutoSize = true;
-            this.labelAltaRol.Location = new System.Drawing.Point(338, 9);
-            this.labelAltaRol.Name = "labelAltaRol";
-            this.labelAltaRol.Size = new System.Drawing.Size(87, 20);
-            this.labelAltaRol.TabIndex = 1;
-            this.labelAltaRol.Text = "Alta de Rol";
+            txtAltaRolNombre.Location = new System.Drawing.Point(226, 65);
+            txtAltaRolNombre.Name = "txtAltaRolNombre";
+            txtAltaRolNombre.Size = new System.Drawing.Size(214, 26);
+            txtAltaRolNombre.TabIndex = 3;
+            txtAltaRolNombre.TextChanged += new System.EventHandler(this.txtAltaRolNombre_TextChanged);
             // 
             // labelAltaRolNombre
             // 
@@ -72,13 +55,6 @@
             this.labelAltaRolNombre.TabIndex = 2;
             this.labelAltaRolNombre.Text = "Nombre del Rol";
             // 
-            // txtAltaRolNombre
-            // 
-            this.txtAltaRolNombre.Location = new System.Drawing.Point(249, 65);
-            this.txtAltaRolNombre.Name = "txtAltaRolNombre";
-            this.txtAltaRolNombre.Size = new System.Drawing.Size(191, 26);
-            this.txtAltaRolNombre.TabIndex = 3;
-            // 
             // labelAltaRolFuncionalidades
             // 
             this.labelAltaRolFuncionalidades.AutoSize = true;
@@ -88,78 +64,11 @@
             this.labelAltaRolFuncionalidades.TabIndex = 4;
             this.labelAltaRolFuncionalidades.Text = "Listado de Funcionalidades";
             // 
-            // chkAltaRolFuncClientes
-            // 
-            this.chkAltaRolFuncClientes.AutoSize = true;
-            this.chkAltaRolFuncClientes.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.chkAltaRolFuncClientes.Location = new System.Drawing.Point(45, 155);
-            this.chkAltaRolFuncClientes.Name = "chkAltaRolFuncClientes";
-            this.chkAltaRolFuncClientes.Size = new System.Drawing.Size(92, 24);
-            this.chkAltaRolFuncClientes.TabIndex = 6;
-            this.chkAltaRolFuncClientes.Text = "Clientes";
-            this.chkAltaRolFuncClientes.UseVisualStyleBackColor = true;
-            // 
-            // chkAltaRolFuncHab
-            // 
-            this.chkAltaRolFuncHab.AutoSize = true;
-            this.chkAltaRolFuncHab.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.chkAltaRolFuncHab.Location = new System.Drawing.Point(155, 155);
-            this.chkAltaRolFuncHab.Name = "chkAltaRolFuncHab";
-            this.chkAltaRolFuncHab.Size = new System.Drawing.Size(128, 24);
-            this.chkAltaRolFuncHab.TabIndex = 7;
-            this.chkAltaRolFuncHab.Text = "Habitaciones";
-            this.chkAltaRolFuncHab.UseVisualStyleBackColor = true;
-            // 
-            // chckAltaRolFuncUsuarios
-            // 
-            this.chckAltaRolFuncUsuarios.AutoSize = true;
-            this.chckAltaRolFuncUsuarios.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.chckAltaRolFuncUsuarios.Location = new System.Drawing.Point(342, 185);
-            this.chckAltaRolFuncUsuarios.Name = "chckAltaRolFuncUsuarios";
-            this.chckAltaRolFuncUsuarios.Size = new System.Drawing.Size(98, 24);
-            this.chckAltaRolFuncUsuarios.TabIndex = 8;
-            this.chckAltaRolFuncUsuarios.Text = "Usuarios";
-            this.chckAltaRolFuncUsuarios.UseVisualStyleBackColor = true;
-            this.chckAltaRolFuncUsuarios.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
-            // chkAltaRolFuncEstadisticas
-            // 
-            this.chkAltaRolFuncEstadisticas.AutoSize = true;
-            this.chkAltaRolFuncEstadisticas.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.chkAltaRolFuncEstadisticas.Location = new System.Drawing.Point(16, 215);
-            this.chkAltaRolFuncEstadisticas.Name = "chkAltaRolFuncEstadisticas";
-            this.chkAltaRolFuncEstadisticas.Size = new System.Drawing.Size(121, 24);
-            this.chkAltaRolFuncEstadisticas.TabIndex = 11;
-            this.chkAltaRolFuncEstadisticas.Text = "Estadisticas";
-            this.chkAltaRolFuncEstadisticas.UseVisualStyleBackColor = true;
-            // 
-            // chkAltaRolFuncRegimenes
-            // 
-            this.chkAltaRolFuncRegimenes.AutoSize = true;
-            this.chkAltaRolFuncRegimenes.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.chkAltaRolFuncRegimenes.Location = new System.Drawing.Point(167, 185);
-            this.chkAltaRolFuncRegimenes.Name = "chkAltaRolFuncRegimenes";
-            this.chkAltaRolFuncRegimenes.Size = new System.Drawing.Size(116, 24);
-            this.chkAltaRolFuncRegimenes.TabIndex = 10;
-            this.chkAltaRolFuncRegimenes.Text = "Régimenes";
-            this.chkAltaRolFuncRegimenes.UseVisualStyleBackColor = true;
-            // 
-            // chkAltaRolFuncReservas
-            // 
-            this.chkAltaRolFuncReservas.AutoSize = true;
-            this.chkAltaRolFuncReservas.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.chkAltaRolFuncReservas.Location = new System.Drawing.Point(35, 185);
-            this.chkAltaRolFuncReservas.Name = "chkAltaRolFuncReservas";
-            this.chkAltaRolFuncReservas.Size = new System.Drawing.Size(102, 24);
-            this.chkAltaRolFuncReservas.TabIndex = 9;
-            this.chkAltaRolFuncReservas.Text = "Reservas";
-            this.chkAltaRolFuncReservas.UseVisualStyleBackColor = true;
-            // 
             // chkAltaRolActivo
             // 
             this.chkAltaRolActivo.AutoSize = true;
             this.chkAltaRolActivo.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkAltaRolActivo.Location = new System.Drawing.Point(12, 273);
+            this.chkAltaRolActivo.Location = new System.Drawing.Point(17, 289);
             this.chkAltaRolActivo.Name = "chkAltaRolActivo";
             this.chkAltaRolActivo.Size = new System.Drawing.Size(78, 24);
             this.chkAltaRolActivo.TabIndex = 12;
@@ -169,7 +78,7 @@
             // 
             // btnAltaUsuarioCancelar
             // 
-            this.btnAltaUsuarioCancelar.Location = new System.Drawing.Point(315, 333);
+            this.btnAltaUsuarioCancelar.Location = new System.Drawing.Point(327, 333);
             this.btnAltaUsuarioCancelar.Name = "btnAltaUsuarioCancelar";
             this.btnAltaUsuarioCancelar.Size = new System.Drawing.Size(110, 40);
             this.btnAltaUsuarioCancelar.TabIndex = 14;
@@ -177,70 +86,57 @@
             this.btnAltaUsuarioCancelar.UseVisualStyleBackColor = true;
             this.btnAltaUsuarioCancelar.Click += new System.EventHandler(this.btnAltaUsuarioCancelar_Click);
             // 
-            // btnAltaUsuarioGuardar
+            // btnAltaRolGuardar
             // 
-            this.btnAltaUsuarioGuardar.Location = new System.Drawing.Point(17, 333);
-            this.btnAltaUsuarioGuardar.Name = "btnAltaUsuarioGuardar";
-            this.btnAltaUsuarioGuardar.Size = new System.Drawing.Size(110, 40);
-            this.btnAltaUsuarioGuardar.TabIndex = 13;
-            this.btnAltaUsuarioGuardar.Text = "Guardar";
-            this.btnAltaUsuarioGuardar.UseVisualStyleBackColor = true;
+            this.btnAltaRolGuardar.Location = new System.Drawing.Point(17, 333);
+            this.btnAltaRolGuardar.Name = "btnAltaRolGuardar";
+            this.btnAltaRolGuardar.Size = new System.Drawing.Size(110, 40);
+            this.btnAltaRolGuardar.TabIndex = 13;
+            this.btnAltaRolGuardar.Text = "Guardar";
+            this.btnAltaRolGuardar.UseVisualStyleBackColor = true;
+            this.btnAltaRolGuardar.Click += new System.EventHandler(this.btnAltaRolGuardar_Click);
             // 
-            // chkAltaRolFuncHoteles
+            // chkListFuncionalidades
             // 
-            this.chkAltaRolFuncHoteles.AutoSize = true;
-            this.chkAltaRolFuncHoteles.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.chkAltaRolFuncHoteles.Location = new System.Drawing.Point(350, 155);
-            this.chkAltaRolFuncHoteles.Name = "chkAltaRolFuncHoteles";
-            this.chkAltaRolFuncHoteles.Size = new System.Drawing.Size(90, 24);
-            this.chkAltaRolFuncHoteles.TabIndex = 15;
-            this.chkAltaRolFuncHoteles.Text = "Hoteles";
-            this.chkAltaRolFuncHoteles.UseVisualStyleBackColor = true;
+            this.chkListFuncionalidades.FormattingEnabled = true;
+            this.chkListFuncionalidades.Location = new System.Drawing.Point(17, 160);
+            this.chkListFuncionalidades.Name = "chkListFuncionalidades";
+            this.chkListFuncionalidades.Size = new System.Drawing.Size(199, 109);
+            this.chkListFuncionalidades.TabIndex = 15;
+            this.chkListFuncionalidades.SelectedIndexChanged += new System.EventHandler(this.chkListFuncionalidades_SelectedIndexChanged);
             // 
             // AltaRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 389);
-            this.Controls.Add(this.chkAltaRolFuncHoteles);
+            this.ClientSize = new System.Drawing.Size(451, 389);
+            this.Controls.Add(this.chkListFuncionalidades);
             this.Controls.Add(this.btnAltaUsuarioCancelar);
-            this.Controls.Add(this.btnAltaUsuarioGuardar);
+            this.Controls.Add(this.btnAltaRolGuardar);
             this.Controls.Add(this.chkAltaRolActivo);
-            this.Controls.Add(this.chkAltaRolFuncEstadisticas);
-            this.Controls.Add(this.chkAltaRolFuncRegimenes);
-            this.Controls.Add(this.chkAltaRolFuncReservas);
-            this.Controls.Add(this.chckAltaRolFuncUsuarios);
-            this.Controls.Add(this.chkAltaRolFuncHab);
-            this.Controls.Add(this.chkAltaRolFuncClientes);
             this.Controls.Add(this.labelAltaRolFuncionalidades);
-            this.Controls.Add(this.txtAltaRolNombre);
+            this.Controls.Add(txtAltaRolNombre);
             this.Controls.Add(this.labelAltaRolNombre);
-            this.Controls.Add(this.labelAltaRol);
-            this.Controls.Add(this.labelFrbaHotelAltaRol);
             this.Name = "AltaRol";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaRol";
+            this.Controls.SetChildIndex(this.labelAltaRolNombre, 0);
+            this.Controls.SetChildIndex(txtAltaRolNombre, 0);
+            this.Controls.SetChildIndex(this.labelAltaRolFuncionalidades, 0);
+            this.Controls.SetChildIndex(this.chkAltaRolActivo, 0);
+            this.Controls.SetChildIndex(this.btnAltaRolGuardar, 0);
+            this.Controls.SetChildIndex(this.btnAltaUsuarioCancelar, 0);
+            this.Controls.SetChildIndex(this.chkListFuncionalidades, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelFrbaHotelAltaRol;
-        private System.Windows.Forms.Label labelAltaRol;
         private System.Windows.Forms.Label labelAltaRolNombre;
-        private System.Windows.Forms.TextBox txtAltaRolNombre;
         private System.Windows.Forms.Label labelAltaRolFuncionalidades;
-        private System.Windows.Forms.CheckBox chkAltaRolFuncClientes;
-        private System.Windows.Forms.CheckBox chkAltaRolFuncHab;
-        private System.Windows.Forms.CheckBox chckAltaRolFuncUsuarios;
-        private System.Windows.Forms.CheckBox chkAltaRolFuncEstadisticas;
-        private System.Windows.Forms.CheckBox chkAltaRolFuncRegimenes;
-        private System.Windows.Forms.CheckBox chkAltaRolFuncReservas;
         private System.Windows.Forms.CheckBox chkAltaRolActivo;
         private System.Windows.Forms.Button btnAltaUsuarioCancelar;
-        private System.Windows.Forms.Button btnAltaUsuarioGuardar;
-        private System.Windows.Forms.CheckBox chkAltaRolFuncHoteles;
+        private System.Windows.Forms.Button btnAltaRolGuardar;
+        private System.Windows.Forms.CheckedListBox chkListFuncionalidades;
     }
 }

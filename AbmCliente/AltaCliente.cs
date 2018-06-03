@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FrbaHotel.AbmCliente
 {
-    public partial class txtAltaClienteApellido : Form
+    public partial class txtAltaClienteApellido : ParentForm
     {
         private static txtAltaClienteApellido instancia = null;
 

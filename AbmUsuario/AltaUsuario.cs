@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace FrbaHotel.AbmUsuario
 {
-    public partial class AltaUsuario : Form
+    public partial class AltaUsuario : ParentForm
     {
         private DbUsuario dbUsuario;
 

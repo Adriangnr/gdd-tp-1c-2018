@@ -14,8 +14,7 @@ namespace FrbaHotel.AbmUsuario
             try
             {
                 SqlCommand comando = ConectorDB.ConectorDb.obtenerComando();
-                comando.Connection = ConectorDB.ConectorDb.ObtenerConexion();
-                comando.CommandType = System.Data.CommandType.Text;
+                
                 comando.CommandText = "insert into Usuarios (username, upassword, habilitado, intentos) values (@username, @password, @hab, @intentos)";
                 comando.Parameters.AddWithValue("@username", usr.Username);
                 comando.Parameters.AddWithValue("@password", usr.Password);

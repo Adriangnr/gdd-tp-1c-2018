@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FrbaHotel.GenerarModificacionReserva
 {
-    public partial class Reservar : Form
+    public partial class Reservar : ParentForm
     {
         private static Reservar instancia = null;
 

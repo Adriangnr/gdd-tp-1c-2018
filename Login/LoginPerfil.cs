@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FrbaHotel.Login
 {
-    public partial class LoginPerfil : Form
+    public partial class LoginPerfil : ParentForm
     {
         private static LoginPerfil instancia = null;
 

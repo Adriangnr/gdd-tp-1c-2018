@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FrbaHotel.RegistrarConsumible
 {
-    public partial class RegistrarConsumible : Form
+    public partial class RegistrarConsumible : ParentForm
     {
         public RegistrarConsumible()
         {

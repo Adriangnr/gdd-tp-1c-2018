@@ -4,7 +4,7 @@ using FrbaHotel.Login;
 
 namespace FrbaHotel.AbmUsuario
 {
-    public partial class Usuarios : Form
+    public partial class Usuarios : ParentForm
     {
         private static Usuarios instancia = null;
 

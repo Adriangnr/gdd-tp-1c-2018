@@ -8,30 +8,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrbaHotel.AbmRegimenes
+namespace FrbaHotel.AbmRol
 {
-    public partial class AltaRegimen : ParentForm
+    public partial class EditarRol : AltaRol
     {
-        private static AltaRegimen instancia = null;
+        private static EditarRol instancia = null;
 
-        public static AltaRegimen obtenerInstancia()
+        public new static EditarRol obtenerInstancia()
         {
             if (instancia == null)
             {
-                instancia = new AltaRegimen();
+                instancia = new EditarRol();
             }
             return instancia;
         }
 
-        private AltaRegimen()
+        private EditarRol()
         {
             InitializeComponent();
+
         }
 
-        private void btnAltaRegimenCancelar_Click(object sender, EventArgs e)
+        private void EditarRol_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            Regimenes.obtenerInstancia().Show();
+
         }
     }
 }

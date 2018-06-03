@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace FrbaHotel.AbmCliente
 {
-    public partial class Clientes : Form
+    public partial class Clientes : ParentForm
     {
         private static Clientes instancia = null;
 

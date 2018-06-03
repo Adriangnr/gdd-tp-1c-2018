@@ -2,7 +2,7 @@
 
 namespace FrbaHotel.ListadoEstadistico
 {
-    public partial class ListadoEstadistico : Form
+    public partial class ListadoEstadistico : ParentForm
     {
         private static ListadoEstadistico instancia = null;
 

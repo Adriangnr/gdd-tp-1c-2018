@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrbaHotel.RegistrarEstadia
+namespace FrbaHotel
 {
-    public partial class RegistrarEstadia : ParentForm
+    public partial class ParentForm : Form
     {
-        public RegistrarEstadia()
+        public ParentForm()
         {
             InitializeComponent();
+            this.labelTituloSeccion.Text = GetType().Name;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
         }
     }
 }

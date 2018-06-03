@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace FrbaHotel.Login
 {
-    public partial class Login : Form
+    public partial class Login : ParentForm
     {
         private DbLogin dbLogin = null;
 

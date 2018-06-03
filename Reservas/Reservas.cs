@@ -2,7 +2,7 @@
 
 namespace FrbaHotel.Reservas
 {
-    public partial class Reservas : Form
+    public partial class Reservas : ParentForm
     {
         public Form caller { get; set; }
 

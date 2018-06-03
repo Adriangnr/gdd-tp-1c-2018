@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace FrbaHotel.AbmHabitacion
 {
-    public partial class Habitaciones : Form
+    public partial class Habitaciones : ParentForm
     {
         private static Habitaciones instancia = null;
 

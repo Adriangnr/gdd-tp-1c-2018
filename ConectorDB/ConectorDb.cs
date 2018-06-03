@@ -12,6 +12,11 @@ namespace FrbaHotel.ConectorDB
             return con;
         }
 
-        public static SqlCommand obtenerComando() => new SqlCommand();
+        public static SqlCommand obtenerComando() {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = ConectorDB.ConectorDb.ObtenerConexion();
+            comando.CommandType = System.Data.CommandType.Text;
+            return comando;
+        } 
     }
 }
