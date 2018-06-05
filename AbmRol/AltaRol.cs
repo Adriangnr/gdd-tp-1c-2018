@@ -64,7 +64,7 @@ namespace FrbaHotel.AbmRol
             {
                 MessageBox.Show("Error al guardar el rol!");
             }
-
+            this.Hide();
             Roles.refrescar();
             Roles.obtenerInstancia().Show();
         }

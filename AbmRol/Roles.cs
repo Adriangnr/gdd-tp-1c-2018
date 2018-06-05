@@ -1,6 +1,7 @@
 ﻿using System;
 using FrbaHotel.Login;
 using System.Windows.Forms;
+using FrbaHotel.Modelos;
 
 namespace FrbaHotel.AbmRol
 {
@@ -38,9 +39,24 @@ namespace FrbaHotel.AbmRol
 
             if (e.ColumnIndex == 4)
             {
-                MessageBox.Show("Seguro desea eliminar el rol?");
+                DialogResult borrar = MessageBox.Show("Realmente desea borrar el rol?", "Alerta", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (borrar == DialogResult.OK)
+                {
+                    DataGridViewRow row = dataGridRoles.Rows[e.RowIndex];
+                    Rol rol = new Rol((Int32)row.Cells[0].Value, (String)row.Cells[1].Value, (Boolean)row.Cells[2].Value);
+                    if( rol.borrar() == 1)
+                    {
+                        MessageBox.Show("Rol eliminado con exito!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al eliminar el Rol.");
+                    }
+                    Roles.obtenerInstancia().Hide();
+                    Roles.refrescar();
+                    Roles.obtenerInstancia().Show();
+                }
             }
-
         }
 
         private void btnAltaRolesCancelar_Click(object sender, EventArgs e)
@@ -90,10 +106,10 @@ namespace FrbaHotel.AbmRol
 
         private void showEditForm()
         {
-            AltaRol altaRolForm = AltaRol.obtenerInstancia();
-            altaRolForm.Controls["txtAltaRolNombre"].Text = "Holaaa";
+            EditarRol editarRolForm = EditarRol.obtenerInstancia();
+            editarRolForm.Controls["txtAltaRolNombre"].Text = "Holaaa";
             this.Hide();
-            altaRolForm.Show();
+            editarRolForm.Show();
         }
     }
 }

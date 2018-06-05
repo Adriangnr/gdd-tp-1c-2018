@@ -46,5 +46,25 @@ namespace FrbaHotel.Modelos
             return resultado;
         }
 
+        public int borrar()
+        {
+            int resultado = 0;
+
+            try
+            {
+                SqlCommand comando = ConectorDB.ConectorDb.obtenerComando();
+
+                comando.CommandText = "delete from gd_esquema.Rol where id=@id";
+                comando.Parameters.AddWithValue("@id", this.id);
+                resultado = comando.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return resultado;
+        }
+
     }
 }
