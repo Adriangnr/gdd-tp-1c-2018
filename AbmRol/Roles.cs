@@ -2,6 +2,7 @@
 using FrbaHotel.Login;
 using System.Windows.Forms;
 using FrbaHotel.Modelos;
+using FrbaHotel.Utils;
 
 namespace FrbaHotel.AbmRol
 {
@@ -84,24 +85,12 @@ namespace FrbaHotel.AbmRol
 
         private void addEditColumn()
         {
-            DataGridViewLinkColumn Editlink = new DataGridViewLinkColumn();
-            Editlink.UseColumnTextForLinkValue = true;
-            Editlink.HeaderText = "Editar";
-            Editlink.DataPropertyName = "lnkColumn";
-            Editlink.LinkBehavior = LinkBehavior.SystemDefault;
-            Editlink.Text = "Editar";
-            dataGridRoles.Columns.Add(Editlink);
+            dataGridRoles.Columns.Add(FormUtils.generarBotonDataGrid(true, "", "dgRolesEditLink", LinkBehavior.SystemDefault, "Editar"));
         }
 
         private void addDeleteColumn()
         {
-            DataGridViewLinkColumn Deletelink = new DataGridViewLinkColumn();
-            Deletelink.UseColumnTextForLinkValue = true;
-            Deletelink.HeaderText = "Borrar";
-            Deletelink.DataPropertyName = "lnkColumn";
-            Deletelink.LinkBehavior = LinkBehavior.SystemDefault;
-            Deletelink.Text = "Borrar";
-            dataGridRoles.Columns.Add(Deletelink);
+            dataGridRoles.Columns.Add(FormUtils.generarBotonDataGrid(true, "", "dgRolesDeleteLink", LinkBehavior.SystemDefault, "Borrar"));
         }
 
         private void showEditForm()

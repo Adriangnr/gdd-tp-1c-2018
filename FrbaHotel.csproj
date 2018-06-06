@@ -220,6 +220,8 @@
     <Compile Include="Reservas\Reservas.Designer.cs">
       <DependentUpon>Reservas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\FormsFactory.cs" />
+    <Compile Include="Utils\FormUtils.cs" />
     <Compile Include="Validador\Validador.cs" />
     <EmbeddedResource Include="AbmCliente\AltaCliente.resx">
       <DependentUpon>AltaCliente.cs</DependentUpon>
@@ -332,7 +334,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Forms\Abms\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
