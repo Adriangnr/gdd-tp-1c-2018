@@ -40,23 +40,28 @@ namespace FrbaHotel.AbmRol
 
             if (e.ColumnIndex == 4)
             {
-                DialogResult borrar = MessageBox.Show("Realmente desea borrar el rol?", "Alerta", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                if (borrar == DialogResult.OK)
+                this.borrarRol(e);
+            }
+        }
+
+        private void borrarRol(DataGridViewCellEventArgs e)
+        {
+            DialogResult borrar = MessageBox.Show("Realmente desea borrar el rol?", "Alerta", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (borrar == DialogResult.OK)
+            {
+                DataGridViewRow row = dataGridRoles.Rows[e.RowIndex];
+                Rol rol = new Rol((Int32)row.Cells[0].Value, (String)row.Cells[1].Value, (Boolean)row.Cells[2].Value);
+                if (rol.borrar() == 1)
                 {
-                    DataGridViewRow row = dataGridRoles.Rows[e.RowIndex];
-                    Rol rol = new Rol((Int32)row.Cells[0].Value, (String)row.Cells[1].Value, (Boolean)row.Cells[2].Value);
-                    if( rol.borrar() == 1)
-                    {
-                        MessageBox.Show("Rol eliminado con exito!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error al eliminar el Rol.");
-                    }
-                    Roles.obtenerInstancia().Hide();
-                    Roles.refrescar();
-                    Roles.obtenerInstancia().Show();
+                    MessageBox.Show("Rol eliminado con exito!");
                 }
+                else
+                {
+                    MessageBox.Show("Error al eliminar el Rol.");
+                }
+                Roles.obtenerInstancia().Hide();
+                Roles.refrescar();
+                Roles.obtenerInstancia().Show();
             }
         }
 

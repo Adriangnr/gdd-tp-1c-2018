@@ -6,6 +6,7 @@ using FrbaHotel.AbmCliente;
 using FrbaHotel.AbmHotel;
 using FrbaHotel.AbmHabitacion;
 using FrbaHotel.AbmRegimenes;
+using FrbaHotel.Utils;
 
 namespace FrbaHotel.Login
 {
@@ -53,7 +54,8 @@ namespace FrbaHotel.Login
         private void btnLoginMenuRoles_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Roles.obtenerInstancia().Show();
+            //Roles.obtenerInstancia().Show();
+            FormsFactory.obtenerFormulario("Roles").Show();
         }
 
         private void btnLoginMenuHoteles_Click(object sender, EventArgs e)
