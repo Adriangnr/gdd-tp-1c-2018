@@ -28,13 +28,14 @@ namespace FrbaHotel.Login
         private void btnLogin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LoginPerfil.obtenerInstancia().Show();
+            FormsFactory.obtenerFormulario("LoginPerfil").Show();
         }
 
         private void btnLoginCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrbaHotel.obtenerInstancia().Show();
+            FormsFactory.obtenerFormulario("FrbaHotel").Show();
+            
         }
 
         public void validar() {

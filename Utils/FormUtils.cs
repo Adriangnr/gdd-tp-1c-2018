@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FrbaHotel.Utils
@@ -20,6 +16,12 @@ namespace FrbaHotel.Utils
             link.Text = texto;
 
             return link;
+        }
+
+        public static void cambiarFormulario(Form origen, String destino)
+        {
+            origen.Hide();
+            FormsFactory.obtenerFormulario(destino).Show();
         }
     }
 }

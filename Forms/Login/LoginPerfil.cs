@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace FrbaHotel.Login
 {
@@ -40,9 +32,8 @@ namespace FrbaHotel.Login
 
         private void btnLoginPerfilContinuar_Click(object sender, EventArgs e)
         {
-            LoginMenu loginMenu = LoginMenu.obtenerInstancia();
             this.Hide();
-            loginMenu.Show();
+            FormsFactory.obtenerFormulario("LoginMenu").Show();
         }
     }
 }

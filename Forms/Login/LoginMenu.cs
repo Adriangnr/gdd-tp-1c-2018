@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Windows.Forms;
-using FrbaHotel.AbmUsuario;
-using FrbaHotel.AbmRol;
-using FrbaHotel.AbmCliente;
-using FrbaHotel.AbmHotel;
-using FrbaHotel.AbmHabitacion;
-using FrbaHotel.AbmRegimenes;
 using FrbaHotel.Utils;
 
 namespace FrbaHotel.Login
@@ -30,8 +23,7 @@ namespace FrbaHotel.Login
 
         private void btnLoginMenuSalir_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.obtenerInstancia().Show();
+            FormUtils.cambiarFormulario(this, "Login");
         }
 
         private void LoginMenu_Load(object sender, EventArgs e)
@@ -41,37 +33,35 @@ namespace FrbaHotel.Login
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Usuarios.obtenerInstancia().Show();
+            FormUtils.cambiarFormulario(this, "Usuarios");
         }
 
         private void btnLoginMenuClientes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Clientes.obtenerInstancia().Show();
+            FormUtils.cambiarFormulario(this, "Clientes");
         }
 
         private void btnLoginMenuRoles_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            //Roles.obtenerInstancia().Show();
-            FormsFactory.obtenerFormulario("Roles").Show();
+            FormUtils.cambiarFormulario(this, "Roles");
         }
 
         private void btnLoginMenuHoteles_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Hoteles.obtenerInstancia().Show();
+            FormUtils.cambiarFormulario(this, "Hoteles");
         }
 
         private void btnLoginMenuRegimenes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Regimenes.obtenerInstancia().Show();
+            FormUtils.cambiarFormulario(this, "Regimenes");
         }
 
         private void btnLoginMenuReservas_Click(object sender, EventArgs e)
         {
+            /*
+             El formulario de reservas, no utiliza el FormUtils, ya que se puede acceder a el, siendo cliente
+             o usuario del sistema, y se necesita saber a donde volver al salir.
+             */
             this.Hide();
             Reservas.Reservas.obtenerInstancia().caller = this;
             Reservas.Reservas.obtenerInstancia().Show();
@@ -79,8 +69,7 @@ namespace FrbaHotel.Login
 
         private void btnLoginMenuHabitaciones_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Habitaciones.obtenerInstancia().Show();
+            FormUtils.cambiarFormulario(this, "Habitaciones");
         }
 
         private void btnLoginMenuEstadisticas_Click(object sender, EventArgs e)

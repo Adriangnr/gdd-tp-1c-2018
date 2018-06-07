@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using FrbaHotel.AbmRol;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrbaHotel.Modelos
 {
@@ -14,7 +9,7 @@ namespace FrbaHotel.Modelos
         public string nombre { get; set; }
         public bool estado { get; set; }
 
-        public ArrayList funcionalidades;
+        public List<Funcionalidad> funcionalidades;
 
         public Rol(int id, string nombre, bool estado)
         {
@@ -22,48 +17,17 @@ namespace FrbaHotel.Modelos
             this.nombre = nombre;
             this.estado = estado;
 
-            this.funcionalidades = new ArrayList();
+            this.funcionalidades = new List<Funcionalidad>();
         }
 
-        public int guardar()
+        public int guardar() //debe usar un store procedure.
         {
-            int resultado = 0;
-
-            try
-            {
-                SqlCommand comando = ConectorDB.ConectorDb.obtenerComando();
-
-                comando.CommandText = "insert into gd_esquema.Rol (nombre, estado) values (@nombre, @estado)";
-                comando.Parameters.AddWithValue("@nombre", this.nombre);
-                comando.Parameters.AddWithValue("@estado", this.estado);
-                resultado = comando.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            return resultado;
+            return DBRol.guardarRol(this);
         }
 
         public int borrar()
         {
-            int resultado = 0;
-
-            try
-            {
-                SqlCommand comando = ConectorDB.ConectorDb.obtenerComando();
-
-                comando.CommandText = "delete from gd_esquema.Rol where id=@id";
-                comando.Parameters.AddWithValue("@id", this.id);
-                resultado = comando.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            return resultado;
+            return DBRol.borrarRol(this);
         }
 
     }

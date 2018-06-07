@@ -36,7 +36,7 @@ namespace FrbaHotel.AbmCliente
         private void btnClientesCargar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            txtAltaClienteApellido.obtenerInstancia().Show();
+            AltaCliente.obtenerInstancia().Show();
         }
     }
 }

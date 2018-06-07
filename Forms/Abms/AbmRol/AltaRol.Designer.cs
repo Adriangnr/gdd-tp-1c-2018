@@ -32,7 +32,7 @@
             this.labelAltaRolNombre = new System.Windows.Forms.Label();
             this.labelAltaRolFuncionalidades = new System.Windows.Forms.Label();
             this.chkAltaRolActivo = new System.Windows.Forms.CheckBox();
-            this.btnAltaUsuarioCancelar = new System.Windows.Forms.Button();
+            this.btnAltaRolCancelar = new System.Windows.Forms.Button();
             this.btnAltaRolGuardar = new System.Windows.Forms.Button();
             this.chkListFuncionalidades = new System.Windows.Forms.CheckedListBox();
             txtAltaRolNombre = new System.Windows.Forms.TextBox();
@@ -76,15 +76,15 @@
             this.chkAltaRolActivo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.chkAltaRolActivo.UseVisualStyleBackColor = true;
             // 
-            // btnAltaUsuarioCancelar
+            // btnAltaRolCancelar
             // 
-            this.btnAltaUsuarioCancelar.Location = new System.Drawing.Point(327, 333);
-            this.btnAltaUsuarioCancelar.Name = "btnAltaUsuarioCancelar";
-            this.btnAltaUsuarioCancelar.Size = new System.Drawing.Size(110, 40);
-            this.btnAltaUsuarioCancelar.TabIndex = 14;
-            this.btnAltaUsuarioCancelar.Text = "Cancelar";
-            this.btnAltaUsuarioCancelar.UseVisualStyleBackColor = true;
-            this.btnAltaUsuarioCancelar.Click += new System.EventHandler(this.btnAltaUsuarioCancelar_Click);
+            this.btnAltaRolCancelar.Location = new System.Drawing.Point(327, 333);
+            this.btnAltaRolCancelar.Name = "btnAltaRolCancelar";
+            this.btnAltaRolCancelar.Size = new System.Drawing.Size(110, 40);
+            this.btnAltaRolCancelar.TabIndex = 14;
+            this.btnAltaRolCancelar.Text = "Cancelar";
+            this.btnAltaRolCancelar.UseVisualStyleBackColor = true;
+            this.btnAltaRolCancelar.Click += new System.EventHandler(this.btnAltaRolCancelar_Click);
             // 
             // btnAltaRolGuardar
             // 
@@ -111,7 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(451, 389);
             this.Controls.Add(this.chkListFuncionalidades);
-            this.Controls.Add(this.btnAltaUsuarioCancelar);
+            this.Controls.Add(this.btnAltaRolCancelar);
             this.Controls.Add(this.btnAltaRolGuardar);
             this.Controls.Add(this.chkAltaRolActivo);
             this.Controls.Add(this.labelAltaRolFuncionalidades);
@@ -124,7 +124,7 @@
             this.Controls.SetChildIndex(this.labelAltaRolFuncionalidades, 0);
             this.Controls.SetChildIndex(this.chkAltaRolActivo, 0);
             this.Controls.SetChildIndex(this.btnAltaRolGuardar, 0);
-            this.Controls.SetChildIndex(this.btnAltaUsuarioCancelar, 0);
+            this.Controls.SetChildIndex(this.btnAltaRolCancelar, 0);
             this.Controls.SetChildIndex(this.chkListFuncionalidades, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,7 +135,7 @@
         private System.Windows.Forms.Label labelAltaRolNombre;
         private System.Windows.Forms.Label labelAltaRolFuncionalidades;
         private System.Windows.Forms.CheckBox chkAltaRolActivo;
-        private System.Windows.Forms.Button btnAltaUsuarioCancelar;
+        private System.Windows.Forms.Button btnAltaRolCancelar;
         private System.Windows.Forms.Button btnAltaRolGuardar;
         private System.Windows.Forms.CheckedListBox chkListFuncionalidades;
     }

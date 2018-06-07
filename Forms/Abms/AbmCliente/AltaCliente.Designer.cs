@@ -1,6 +1,6 @@
 ﻿namespace FrbaHotel.AbmCliente
 {
-    partial class txtAltaClienteApellido
+    partial class AltaCliente
     {
         /// <summary>
         /// Required designer variable.

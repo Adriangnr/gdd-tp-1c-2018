@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Forms;
 
 namespace FrbaHotel
 {
@@ -24,13 +23,13 @@ namespace FrbaHotel
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GenerarModificacionReserva.GenerarModificarReserva.obtenerInstancia().Show();
+            FormsFactory.obtenerFormulario("GenerarModificarReserva").Show();
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login.Login.obtenerInstancia().Show();
+            FormsFactory.obtenerFormulario("Login").Show();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

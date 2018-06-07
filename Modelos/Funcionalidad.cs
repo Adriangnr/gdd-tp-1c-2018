@@ -16,5 +16,10 @@ namespace FrbaHotel.Modelos
             this.id = id;
             this.nombre = nombre;
         }
+
+        public override string ToString()
+        {
+            return this.nombre;
+        }
     }
 }
