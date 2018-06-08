@@ -119,9 +119,10 @@ namespace FrbaHotel.AbmRol
         private EditarRol prepareEditForm(DataGridViewRow row)
         {
             Rol rol = this.obtenerRolDeFila(row);
-            EditarRol editarRolForm = EditarRol.obtenerInstancia();
-            editarRolForm.Controls["txtAltaRolNombre"].Text = rol.nombre;
-            ((CheckBox)editarRolForm.Controls["chkAltaRolActivo"]).Checked = rol.estado;
+            EditarRol editarRolForm = (EditarRol) FormsFactory.obtenerFormulario("EditarRol");
+            editarRolForm.Controls["labelIdValue"].Text = rol.id.ToString();
+            editarRolForm.Controls["txtEditarRolNombre"].Text = rol.nombre;
+            ((CheckBox)editarRolForm.Controls["chkEditarRolActivo"]).Checked = rol.estado;
 
             foreach (Funcionalidad func in rol.funcionalidades)
             {

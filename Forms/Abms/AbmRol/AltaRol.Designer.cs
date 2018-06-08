@@ -54,6 +54,7 @@
             this.labelAltaRolNombre.Size = new System.Drawing.Size(118, 20);
             this.labelAltaRolNombre.TabIndex = 2;
             this.labelAltaRolNombre.Text = "Nombre del Rol";
+            this.labelAltaRolNombre.Click += new System.EventHandler(this.labelAltaRolNombre_Click);
             // 
             // labelAltaRolFuncionalidades
             // 
@@ -63,6 +64,7 @@
             this.labelAltaRolFuncionalidades.Size = new System.Drawing.Size(203, 20);
             this.labelAltaRolFuncionalidades.TabIndex = 4;
             this.labelAltaRolFuncionalidades.Text = "Listado de Funcionalidades";
+            this.labelAltaRolFuncionalidades.Click += new System.EventHandler(this.labelAltaRolFuncionalidades_Click);
             // 
             // chkAltaRolActivo
             // 
@@ -75,6 +77,7 @@
             this.chkAltaRolActivo.Text = "Activo";
             this.chkAltaRolActivo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.chkAltaRolActivo.UseVisualStyleBackColor = true;
+            this.chkAltaRolActivo.CheckedChanged += new System.EventHandler(this.chkAltaRolActivo_CheckedChanged);
             // 
             // btnAltaRolCancelar
             // 

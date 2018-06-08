@@ -28,6 +28,7 @@ namespace FrbaHotel
             forms.Add("Habitaciones", Habitaciones.obtenerInstancia());
             forms.Add("Regimenes", Regimenes.obtenerInstancia());
             forms.Add("Clientes", Clientes.obtenerInstancia());
+            forms.Add("EditarRol", EditarRol.obtenerInstancia());
         }
 
         public static Form obtenerFormulario(String nombre)

@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using FrbaHotel.Modelos;
+using FrbaHotel.Utils.DB;
 
 namespace FrbaHotel.AbmRol
 {
@@ -77,7 +78,6 @@ namespace FrbaHotel.AbmRol
 
         private static int guardarFuncionalidades(Rol rol)
         {
-            Console.WriteLine(rol.funcionalidades[0]);
             int resultado = 0;
             try
             {
@@ -121,23 +121,39 @@ namespace FrbaHotel.AbmRol
             return resultado;
         }
 
+        private static int borrarFuncionalidadesPorIdRol(int id)
+        {
+            Hashtable condiciones = new Hashtable();
+            condiciones.Add("id_rol", id);
+            return DBInterfaz.borrar("gd_esquema.Funcionalidad_Rol", condiciones);
+        }
+
         public static int borrarRol(Rol rol)
         {
-            int resultado = 0;
-            try
-            {
-                SqlCommand comando = ConectorDB.ConectorDb.obtenerComando();
+            borrarFuncionalidadesPorIdRol(rol.id);
 
-                comando.CommandText = "delete from gd_esquema.Rol where id=@id";
-                comando.Parameters.AddWithValue("@id", rol.id);
-                resultado = comando.ExecuteNonQuery();
-            }
-            catch (Exception e)
+            Hashtable condicionesRol = new Hashtable();
+            condicionesRol.Add("id", rol.id);
+            return DBInterfaz.borrar("gd_esquema.Rol", condicionesRol);
+        }
+
+        public static int actualizarRol(Rol rol)
+        {
+            borrarFuncionalidadesPorIdRol(rol.id);
+            Hashtable condiciones = new Hashtable();
+            condiciones.Add("id", rol.id);
+
+            Hashtable nuevosValores = new Hashtable();
+            nuevosValores.Add("nombre", "\'"+rol.nombre+"\'");
+            int estado = (rol.estado) ? 1 : 0;
+            nuevosValores.Add("estado", estado);
+
+            if( DBInterfaz.actualizar("gd_esquema.Rol", nuevosValores, condiciones) > 0)
             {
-                Console.WriteLine(e.Message);
+                return guardarFuncionalidades(rol);
             }
 
-            return resultado;
+            return 0;
         }
     }
 }

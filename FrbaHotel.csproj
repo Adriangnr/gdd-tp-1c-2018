@@ -221,6 +221,7 @@
       <DependentUpon>Reservas.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormsFactory.cs" />
+    <Compile Include="Utils\DB\DBInterfaz.cs" />
     <Compile Include="Utils\FormUtils.cs" />
     <Compile Include="Utils\Validador\Validador.cs" />
     <EmbeddedResource Include="Forms\Abms\AbmCliente\AltaCliente.resx">

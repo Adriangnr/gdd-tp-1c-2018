@@ -51,7 +51,8 @@ namespace FrbaHotel.AbmRol
 
         private void btnAltaRolCancelar_Click(object sender, EventArgs e)
         {
-            FormUtils.cambiarFormulario(this, "Roles");
+            this.Hide();
+            Roles.obtenerInstancia().Show();
         }
 
         private void chkAltaRolFuncClientes_CheckedChanged(object sender, EventArgs e)
@@ -93,6 +94,21 @@ namespace FrbaHotel.AbmRol
         private void txtAltaRolNombre_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void chkAltaRolActivo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelAltaRolFuncionalidades_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelAltaRolNombre_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,5 +30,9 @@ namespace FrbaHotel.Modelos
             return DBRol.borrarRol(this);
         }
 
+        public int actualizar()
+        {
+            return DBRol.actualizarRol(this);
+        }
     }
 }
