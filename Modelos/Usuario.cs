@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FrbaHotel.Modelos
 {
-    public class Usuario
+    public class Usuario : FrbaModel
     {
         private int id;
         private string username;

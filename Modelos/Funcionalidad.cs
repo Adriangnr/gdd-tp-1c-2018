@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FrbaHotel.Modelos
 {
-    public class Funcionalidad
+    public class Funcionalidad : FrbaModel
     {
         public int id { get; set; }
         public string nombre { get; set; }

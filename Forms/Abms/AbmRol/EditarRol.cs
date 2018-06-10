@@ -32,6 +32,16 @@ namespace FrbaHotel.AbmRol
             this.cargarFuncionalidades();
         }
 
+        public void refrescar()
+        {
+            this.Controls["txtEditarRolNombre"].Text = "";
+            ((CheckBox) this.Controls["chkEditarRolActivo"]).Checked = false;
+            foreach (int i in chkListFuncionalidades.CheckedIndices)
+            {
+                chkListFuncionalidades.SetItemCheckState(i, CheckState.Unchecked);
+            }
+        }
+
         private void cargarFuncionalidades()
         {
             foreach (Funcionalidad func in DBRol.obtenerFuncionalidades())

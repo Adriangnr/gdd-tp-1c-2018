@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace FrbaHotel.Modelos
 {
-    public class Rol
+    public class Rol : FrbaModel
     {
         public int id { get; set; }
         public string nombre { get; set; }

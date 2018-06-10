@@ -191,6 +191,7 @@
     <Compile Include="Forms\Login\LoginPerfil.Designer.cs">
       <DependentUpon>LoginPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\FrbaModel.cs" />
     <Compile Include="Modelos\Funcionalidad.cs" />
     <Compile Include="Modelos\Rol.cs" />
     <Compile Include="Modelos\Usuario.cs" />

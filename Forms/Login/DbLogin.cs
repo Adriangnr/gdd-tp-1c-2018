@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FrbaHotel.Modelos;
+using System;
 
 namespace FrbaHotel.Login
 {
     public class DbLogin
     {
+        public static Boolean existeUsuario(Usuario usuario)
+        {
+            return true;
+        }
     }
 }

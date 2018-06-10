@@ -120,6 +120,7 @@ namespace FrbaHotel.AbmRol
         {
             Rol rol = this.obtenerRolDeFila(row);
             EditarRol editarRolForm = (EditarRol) FormsFactory.obtenerFormulario("EditarRol");
+            editarRolForm.refrescar();
             editarRolForm.Controls["labelIdValue"].Text = rol.id.ToString();
             editarRolForm.Controls["txtEditarRolNombre"].Text = rol.nombre;
             ((CheckBox)editarRolForm.Controls["chkEditarRolActivo"]).Checked = rol.estado;

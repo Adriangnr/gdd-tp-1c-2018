@@ -30,8 +30,8 @@
         {
             this.labelUsuario = new System.Windows.Forms.Label();
             this.labelContrasenia = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtLoginUsuario = new System.Windows.Forms.TextBox();
+            this.txtLoginPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnLoginCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -54,20 +54,20 @@
             this.labelContrasenia.TabIndex = 1;
             this.labelContrasenia.Text = "Contraseña";
             // 
-            // textBox1
+            // txtLoginUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtLoginUsuario.Location = new System.Drawing.Point(178, 62);
+            this.txtLoginUsuario.Name = "txtLoginUsuario";
+            this.txtLoginUsuario.Size = new System.Drawing.Size(152, 26);
+            this.txtLoginUsuario.TabIndex = 2;
             // 
-            // textBox2
+            // txtLoginPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(178, 127);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(152, 26);
-            this.textBox2.TabIndex = 3;
+            this.txtLoginPassword.Location = new System.Drawing.Point(178, 127);
+            this.txtLoginPassword.Name = "txtLoginPassword";
+            this.txtLoginPassword.PasswordChar = '*';
+            this.txtLoginPassword.Size = new System.Drawing.Size(152, 26);
+            this.txtLoginPassword.TabIndex = 3;
             // 
             // btnLogin
             // 
@@ -96,13 +96,18 @@
             this.ClientSize = new System.Drawing.Size(393, 326);
             this.Controls.Add(this.btnLoginCancelar);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLoginPassword);
+            this.Controls.Add(this.txtLoginUsuario);
             this.Controls.Add(this.labelContrasenia);
             this.Controls.Add(this.labelUsuario);
             this.Name = "Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Controls.SetChildIndex(this.labelUsuario, 0);
+            this.Controls.SetChildIndex(this.labelContrasenia, 0);
+            this.Controls.SetChildIndex(this.txtLoginUsuario, 0);
+            this.Controls.SetChildIndex(this.txtLoginPassword, 0);
+            this.Controls.SetChildIndex(this.btnLogin, 0);
+            this.Controls.SetChildIndex(this.btnLoginCancelar, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,8 +117,8 @@
 
         private System.Windows.Forms.Label labelUsuario;
         private System.Windows.Forms.Label labelContrasenia;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtLoginUsuario;
+        private System.Windows.Forms.TextBox txtLoginPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnLoginCancelar;
     }

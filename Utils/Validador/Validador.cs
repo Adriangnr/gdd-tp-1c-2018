@@ -1,12 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FrbaHotel.Modelos;
+using System;
+using FrbaHotel.Login;
 
 namespace FrbaHotel.Validador
 {
-    public class Validador
+    public static class Validador
     {
+        public static Boolean validar(FrbaModel modelo)
+        {
+            switch (modelo.GetType().ToString())
+            {
+                case "FrbaHotel.Modelos.Usuario":
+                    return validarUsuario((Usuario)modelo);
+                break;
+                
+
+            }
+            return false;
+        }
+
+        private static Boolean validarUsuario(Usuario usuario)
+        {
+            return DbLogin.existeUsuario(usuario);
+        }
     }
 }

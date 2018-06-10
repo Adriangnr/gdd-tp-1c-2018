@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using FrbaHotel.Modelos;
+using FrbaHotel.Validador;
 
 namespace FrbaHotel.Login
 {
@@ -27,8 +29,19 @@ namespace FrbaHotel.Login
         
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormsFactory.obtenerFormulario("LoginPerfil").Show();
+            Usuario usuario = new Usuario();
+            usuario.Username = txtLoginUsuario.Text;
+            usuario.Password = txtLoginPassword.Text;
+            if ( Validador.Validador.validar(usuario) )
+            {
+                this.Hide();
+                FormsFactory.obtenerFormulario("LoginPerfil").Show();
+            }
+            else
+            {
+                MessageBox.Show("Error. Verifique los datos ingresados");
+            }
+            
         }
 
         private void btnLoginCancelar_Click(object sender, EventArgs e)
