@@ -12,11 +12,9 @@ namespace FrbaHotel.Validador
             {
                 case "FrbaHotel.Modelos.Usuario":
                     return validarUsuario((Usuario)modelo);
-                break;
-                
 
+                default: return false;            
             }
-            return false;
         }
 
         private static Boolean validarUsuario(Usuario usuario)

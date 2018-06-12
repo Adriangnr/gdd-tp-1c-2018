@@ -23,7 +23,10 @@ namespace FrbaHotel.Login
 
         private void btnLoginMenuSalir_Click(object sender, EventArgs e)
         {
-            FormUtils.cambiarFormulario(this, "Login");
+            this.Hide();
+            Login login = (Login) FormsFactory.obtenerFormulario("Login");
+            login.refrescar();
+            login.Show();
         }
 
         private void LoginMenu_Load(object sender, EventArgs e)

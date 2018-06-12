@@ -20,6 +20,11 @@ namespace FrbaHotel.Modelos
             this.funcionalidades = new List<Funcionalidad>();
         }
 
+        public override string ToString()
+        {
+            return this.nombre;
+        }
+
         public int guardar() //debe usar un store procedure.
         {
             return DBRol.guardarRol(this);

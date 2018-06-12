@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FrbaHotel.Modelos;
+using System;
+using System.Collections.Generic;
 
 namespace FrbaHotel.Login
 {
@@ -20,6 +22,11 @@ namespace FrbaHotel.Login
             InitializeComponent();
         }
 
+        public void agregarRoles(List<Rol> roles)
+        {
+            this.comboLoginPerfil.DataSource = roles;
+        }
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -32,6 +39,10 @@ namespace FrbaHotel.Login
 
         private void btnLoginPerfilContinuar_Click(object sender, EventArgs e)
         {
+            /*
+             List<Funcionalidad> funcionalidades = DbLogin.obtenerFuncionalidadesPorRol();
+
+             */
             this.Hide();
             FormsFactory.obtenerFormulario("LoginMenu").Show();
         }
