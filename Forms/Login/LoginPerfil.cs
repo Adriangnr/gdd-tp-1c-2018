@@ -39,10 +39,9 @@ namespace FrbaHotel.Login
 
         private void btnLoginPerfilContinuar_Click(object sender, EventArgs e)
         {
-            /*
-             List<Funcionalidad> funcionalidades = DbLogin.obtenerFuncionalidadesPorRol();
+            Rol rolSeleccionado = (Rol)this.comboLoginPerfil.SelectedItem;
+            List<Funcionalidad> funcionalidades = DbLogin.obtenerFuncionalidadesPorRol(rolSeleccionado.id);
 
-             */
             this.Hide();
             FormsFactory.obtenerFormulario("LoginMenu").Show();
         }

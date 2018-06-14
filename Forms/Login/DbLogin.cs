@@ -48,5 +48,23 @@ namespace FrbaHotel.Login
             }
             return roles;
         }
+
+        public static List<Funcionalidad> obtenerFuncionalidadesPorRol(int id)
+        {
+            List<Funcionalidad> listado = new List<Funcionalidad>();
+            SqlCommand comando = ConectorDB.ConectorDb.obtenerComando();
+            comando.CommandText = "select f.id, f.nombre from gd_esquema.Funcionalidad f join " +
+                "gd_esquema.Funcionalidad_Rol fr on f.id = fr.id_funcionalidad join gd_esquema.Rol r " +
+                "on r.id = fr.id_rol where r.id = @idrol";
+            comando.Parameters.AddWithValue("@idrol", id);
+            SqlDataReader resultado = comando.ExecuteReader();
+
+            while (resultado.Read())
+            {
+                Funcionalidad fun = new Funcionalidad(resultado.GetInt32(0), resultado.GetString(1));
+                listado.Add(fun);
+            }
+            return listado;
+        }
     }
 }
