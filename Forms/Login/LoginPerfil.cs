@@ -40,10 +40,12 @@ namespace FrbaHotel.Login
         private void btnLoginPerfilContinuar_Click(object sender, EventArgs e)
         {
             Rol rolSeleccionado = (Rol)this.comboLoginPerfil.SelectedItem;
-            List<Funcionalidad> funcionalidades = DbLogin.obtenerFuncionalidadesPorRol(rolSeleccionado.id);
+            
+            LoginMenu loginMenu = (LoginMenu)FormsFactory.obtenerFormulario("LoginMenu");
+            loginMenu.agregarFuncionalidades(DbLogin.obtenerFuncionalidadesPorRol(rolSeleccionado.id));
 
             this.Hide();
-            FormsFactory.obtenerFormulario("LoginMenu").Show();
+            loginMenu.Show();
         }
     }
 }

@@ -1,11 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using FrbaHotel.Forms.Login;
+using FrbaHotel.Modelos;
 using FrbaHotel.Utils;
 
 namespace FrbaHotel.Login
 {
-    public partial class LoginMenu : ParentForm
+    public partial class LoginMenu : Form
     {
         private static LoginMenu instancia = null;
+
+        public object SystemParameters { get; }
 
         public static LoginMenu obtenerInstancia()
         {
@@ -16,13 +22,40 @@ namespace FrbaHotel.Login
             return instancia;
         }
 
+        public void agregarFuncionalidades(List<Funcionalidad> funcionalidades)
+        {
+            Panel panelFuncionalidades = new Panel();
+            panelFuncionalidades.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            
+            panelFuncionalidades.Top = 5;
+            panelFuncionalidades.Left = 5;
+           
+            foreach (Funcionalidad f in funcionalidades)
+            {
+                panelFuncionalidades.Controls.Add(BotonesFuncionalidad.obtenerBoton(f));
+            }
+            this.Controls.Add(panelFuncionalidades);
+            Button boton = BotonesFuncionalidad.obtenerBoton(new Funcionalidad(0, "Salir"));
+                boton.Click += obtenerEventHandler("Salir");
+            this.Controls.Add(boton);
+            this.Refresh();
+        }
+
         private LoginMenu()
         {
+            this.Height = 0;
+            this.Width = 0;
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             InitializeComponent();
         }
 
         private void btnLoginMenuSalir_Click(object sender, EventArgs e)
         {
+            Button button = sender as Button;
             this.Hide();
             Login login = (Login) FormsFactory.obtenerFormulario("Login");
             login.refrescar();
@@ -79,6 +112,25 @@ namespace FrbaHotel.Login
         {
             this.Hide();
             ListadoEstadistico.ListadoEstadistico.obtenerInstancia().Show();
+        }
+
+        private EventHandler obtenerEventHandler(String nombre)
+        {
+            switch (nombre)
+            {
+                case "Salir":
+                    return new EventHandler(salirClick);
+            }
+            return null;
+        }
+
+        private void salirClick(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            this.Hide();
+            Login login = (Login)FormsFactory.obtenerFormulario("Login");
+            login.refrescar();
+            login.Show();
         }
     }
 }
